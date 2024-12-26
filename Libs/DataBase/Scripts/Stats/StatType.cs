@@ -14,6 +14,7 @@ namespace cfg.Stats
     public enum StatType
     {
         MaxHealth = 0,
+        Speed = 1,
     }
 
 } 

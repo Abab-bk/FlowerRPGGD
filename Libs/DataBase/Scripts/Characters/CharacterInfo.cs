@@ -21,6 +21,7 @@ public sealed partial class CharacterInfo : Luban.BeanBase
         Name = _buf.GetProperty("name").GetString();
         Level = _buf.GetProperty("level").GetInt32();
         Sprite = _buf.GetProperty("sprite").GetString();
+        Stats = StatsInfo.DeserializeStatsInfo(_buf.GetProperty("stats"));
     }
 
     public static CharacterInfo DeserializeCharacterInfo(JsonElement _buf)
@@ -32,12 +33,14 @@ public sealed partial class CharacterInfo : Luban.BeanBase
     public readonly string Name;
     public readonly int Level;
     public readonly string Sprite;
+    public readonly StatsInfo Stats;
    
     public const int __ID__ = 183930611;
     public override int GetTypeId() => __ID__;
 
     public  void ResolveRef(Tables tables)
     {
+        Stats?.ResolveRef(tables);
     }
 
     public override string ToString()
@@ -47,6 +50,7 @@ public sealed partial class CharacterInfo : Luban.BeanBase
         + "name:" + Name + ","
         + "level:" + Level + ","
         + "sprite:" + Sprite + ","
+        + "stats:" + Stats + ","
         + "}";
     }
 }

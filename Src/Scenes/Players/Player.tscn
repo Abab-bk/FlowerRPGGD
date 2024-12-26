@@ -1,11 +1,59 @@
-[gd_scene load_steps=2 format=3 uid="uid://crfl50dhyikds"]
+[gd_scene load_steps=11 format=3 uid="uid://crfl50dhyikds"]
 
 [ext_resource type="Script" path="res://Scripts/Players/Player.cs" id="1_i1d4v"]
 
+[sub_resource type="StateConfig" id="StateConfig_ts4ni"]
+state_name = &"Idle"
+type = 1
+editor_offset = Vector2(200, 100)
+
+[sub_resource type="StateConfig" id="StateConfig_yk6gi"]
+state_name = &"Running"
+editor_offset = Vector2(560, 100)
+
+[sub_resource type="VariableConfig" id="VariableConfig_ea1g3"]
+variable_name = &"ToRunning"
+resource_name = "ToRunning: Trigger"
+
+[sub_resource type="VariableExpressionConfig" id="VariableExpressionConfig_4eq4k"]
+variable_config = SubResource("VariableConfig_ea1g3")
+trigger_type = 0
+
+[sub_resource type="TransitionConfig" id="TransitionConfig_5mfad"]
+from_state_config = SubResource("StateConfig_ts4ni")
+to_state_config = SubResource("StateConfig_yk6gi")
+type = 2
+and_mode = true
+variable_expression_config_list = Array[VariableExpressionConfig]([SubResource("VariableExpressionConfig_4eq4k")])
+
+[sub_resource type="VariableConfig" id="VariableConfig_8rm1o"]
+variable_name = &"ToIdle"
+resource_name = "ToIdle: Trigger"
+
+[sub_resource type="VariableExpressionConfig" id="VariableExpressionConfig_kpkx5"]
+variable_config = SubResource("VariableConfig_8rm1o")
+trigger_type = 0
+
+[sub_resource type="TransitionConfig" id="TransitionConfig_fvb5v"]
+from_state_config = SubResource("StateConfig_yk6gi")
+to_state_config = SubResource("StateConfig_ts4ni")
+type = 2
+and_mode = true
+variable_expression_config_list = Array[VariableExpressionConfig]([SubResource("VariableExpressionConfig_kpkx5")])
+
+[sub_resource type="FSMConfig" id="FSMConfig_mfa7i"]
+state_config_list = Array[StateConfig]([SubResource("StateConfig_ts4ni"), SubResource("StateConfig_yk6gi")])
+transition_config_list = Array[TransitionConfig]([SubResource("TransitionConfig_5mfad"), SubResource("TransitionConfig_fvb5v")])
+variable_config_list = Array[VariableConfig]([SubResource("VariableConfig_8rm1o"), SubResource("VariableConfig_ea1g3")])
+
 [node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("AnimatedSprite2D")]
+motion_mode = 1
 script = ExtResource("1_i1d4v")
 AnimatedSprite2D = NodePath("AnimatedSprite2D")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+[node name="HFSM" type="HFSM" parent="."]
+root_fsm_config = SubResource("FSMConfig_mfa7i")
