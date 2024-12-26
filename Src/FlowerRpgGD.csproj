@@ -6,6 +6,7 @@
     <EnableDynamicLoading>true</EnableDynamicLoading>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <RootNamespace>Game</RootNamespace>
+    <Nullable>disable</Nullable>
   </PropertyGroup>
 
   <PropertyGroup>
@@ -40,10 +41,16 @@
   
   <ItemGroup>
     <PackageReference Include="GDTask" Version="1.2.2" />
+    <PackageReference Include="GodotSharp.SourceGenerators" Version="2.5.0" />
     <PackageReference Include="GTweensGodot" Version="6.0.0" />
     <PackageReference Include="Linguini.Bundle" Version="0.8.1" />
     <PackageReference Include="MemoryPack" Version="1.21.3" />
 
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.9.0" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <Folder Include="Scripts\Components\" />
+    <Folder Include="Scripts\SceneBuilder\" />
   </ItemGroup>
 </Project>

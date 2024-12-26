@@ -1,6 +1,6 @@
 ﻿Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyNewGame", "MyNewGame.csproj", "{D42C9F8F-529A-4067-A9C1-A0EFD78209BE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlowerRpgGD", "FlowerRpgGD.csproj", "{D42C9F8F-529A-4067-A9C1-A0EFD78209BE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AcidUtilities", "..\Libs\AcidUtilities\AcidUtilities.csproj", "{7C0FE67B-6544-438E-8024-E0938A2DB92A}"
 EndProject

@@ -15,16 +15,19 @@ namespace cfg
 public partial class Tables
 {
     public TbConstants TbConstants {get; }
+    public Characters.TbCharacters TbCharacters {get; }
 
     public Tables(System.Func<string, JsonElement> loader)
     {
         TbConstants = new TbConstants(loader("tbconstants"));
+        TbCharacters = new Characters.TbCharacters(loader("characters_tbcharacters"));
         ResolveRef();
     }
     
     private void ResolveRef()
     {
         TbConstants.ResolveRef(this);
+        TbCharacters.ResolveRef(this);
     }
 }
 

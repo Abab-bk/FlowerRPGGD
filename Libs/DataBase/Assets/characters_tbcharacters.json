@@ -1,0 +1,14 @@
+[
+  {
+    "id": "c_player",
+    "name": "Player",
+    "level": 1,
+    "sprite": "Base"
+  },
+  {
+    "id": "c_guide",
+    "name": "Guide",
+    "level": 1,
+    "sprite": "Undead"
+  }
+]
