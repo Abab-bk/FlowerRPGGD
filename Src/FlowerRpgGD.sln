@@ -10,6 +10,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataBase", "..\Libs\DataBas
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestProject", "..\Libs\TestProject\TestProject.csproj", "{9671F5CC-F0B3-426C-87EF-261A795E22CB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Server", "..\Libs\Server\Server.csproj", "{C99490A5-B393-4AD1-A92B-8C1170C19A9C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 	Debug|Any CPU = Debug|Any CPU
@@ -47,5 +49,11 @@ Global
 		{9671F5CC-F0B3-426C-87EF-261A795E22CB}.ExportDebug|Any CPU.Build.0 = Debug|Any CPU
 		{9671F5CC-F0B3-426C-87EF-261A795E22CB}.ExportRelease|Any CPU.ActiveCfg = Debug|Any CPU
 		{9671F5CC-F0B3-426C-87EF-261A795E22CB}.ExportRelease|Any CPU.Build.0 = Debug|Any CPU
+		{C99490A5-B393-4AD1-A92B-8C1170C19A9C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C99490A5-B393-4AD1-A92B-8C1170C19A9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C99490A5-B393-4AD1-A92B-8C1170C19A9C}.ExportDebug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C99490A5-B393-4AD1-A92B-8C1170C19A9C}.ExportDebug|Any CPU.Build.0 = Debug|Any CPU
+		{C99490A5-B393-4AD1-A92B-8C1170C19A9C}.ExportRelease|Any CPU.ActiveCfg = Debug|Any CPU
+		{C99490A5-B393-4AD1-A92B-8C1170C19A9C}.ExportRelease|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 EndGlobal

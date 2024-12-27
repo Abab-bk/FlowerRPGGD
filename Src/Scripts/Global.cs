@@ -1,4 +1,6 @@
 ﻿using System.Collections.Generic;
+using Server;
+using SuperSimpleTcp;
 
 namespace Game.Scripts;
 
@@ -7,6 +9,8 @@ public static class Global
     public static readonly List<string> Flags = new();
     public static World World { get; set; }
     public static Application Application { get; set; }
+    public static ServerApp ServerApp { get; set; }
+    public static SimpleTcpClient Client { get; set; }
 
     private static AppSaver _appSaver;
     

@@ -3,6 +3,8 @@ using DataBase;
 using DsUi;
 using Game.Scripts.Players;
 using Godot;
+using Server;
+using SuperSimpleTcp;
 
 namespace Game.Scripts;
 
@@ -22,9 +24,21 @@ public partial class World : Node2D
         AddChild(player);
         player.RSetGlobalPosition(new Vector2(100f, 100f));
         
+        // TODO: test, need to be removed
+        RunServer();
+        
         Logger.Log("[World] Ready");
     }
-    
+
+    private void RunServer()
+    {
+        Global.ServerApp = new ServerApp("127.0.0.1", 9000, Logger.GetLogger());
+        Global.ServerApp.Run();
+        
+        Global.Client = new SimpleTcpClient("127.0.0.1:9000");
+        Global.Client.Connect();
+    }
+
     public void Destroy()
     {
         Global.World = null;

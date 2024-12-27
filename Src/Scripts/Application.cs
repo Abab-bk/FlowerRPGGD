@@ -16,6 +16,8 @@ public partial class Application : Node2D
     
     public override void _Ready()
     {
+        Logger.Init();
+        
         _stateMachine = HFSMUtils.TryConvert<HFSM>(GetNode<Node>("HFSM"));
 
         if (_stateMachine == null)
@@ -44,7 +46,7 @@ public partial class Application : Node2D
         {
             case "PreBoot":
                 Global.Application = this;
-
+                
                 Global.AppSaver = new AppSaver();
                 Global.AppSaver.Load();
                 

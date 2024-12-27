@@ -32,6 +32,7 @@
     <ProjectReference Include="..\Libs\AcidUtilities\AcidUtilities.csproj" />
     <ProjectReference Include="..\Libs\DataBase\DataBase.csproj" />
     <ProjectReference Include="..\Libs\Luban\Luban.csproj" />
+    <ProjectReference Include="..\Libs\Server\Server.csproj" />
   </ItemGroup>
   
   <ItemGroup>
@@ -47,10 +48,18 @@
     <PackageReference Include="MemoryPack" Version="1.21.3" />
 
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.9.0" />
+
+    <PackageReference Include="ZLogger" Version="2.5.9" />
   </ItemGroup>
   
   <ItemGroup>
     <Folder Include="Scripts\Components\" />
     <Folder Include="Scripts\SceneBuilder\" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <Reference Include="GodotSharp.SourceGenerators">
+      <HintPath>GodotSharp.SourceGenerators.dll</HintPath>
+    </Reference>
   </ItemGroup>
 </Project>
