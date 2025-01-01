@@ -32,7 +32,6 @@
     <ProjectReference Include="..\Libs\AcidUtilities\AcidUtilities.csproj" />
     <ProjectReference Include="..\Libs\DataBase\DataBase.csproj" />
     <ProjectReference Include="..\Libs\Luban\Luban.csproj" />
-    <ProjectReference Include="..\Libs\Server\Server.csproj" />
   </ItemGroup>
   
   <ItemGroup>

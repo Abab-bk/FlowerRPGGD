@@ -16,6 +16,7 @@ public partial class Debugger : Node
     {
         ImGui.Begin("Debugger");
         ImGui.Text($"Paused: {Global.IsPaused}");
+        
         ImGui.End();
     }
 #endif
