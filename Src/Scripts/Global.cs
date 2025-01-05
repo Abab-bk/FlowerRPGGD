@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Game.Scripts.Inventories;
 using Game.Scripts.Players;
 using Game.Scripts.Ui.Hud;
 
@@ -10,6 +11,8 @@ public static class Global
     public static World World { get; set; }
     public static Application Application { get; set; }
     public static HudPanel Hud { get; set; }
+    public static Player Player { get; set; }
+    public static Inventory PlayerInventory => Player.Inventory;
     
     public static List<Player> PlayerEntities = new();
     

@@ -5,6 +5,7 @@ using Godot;
 using cfg.Characters;
 using Game.Scripts.Base;
 using Game.Scripts.Interactions;
+using Game.Scripts.Inventories;
 using Game.Scripts.Ui.InteractTip;
 
 namespace Game.Scripts.Players;
@@ -13,10 +14,13 @@ public partial class Player : CharacterEntity
 {
     [Export] private Area2D InteractionArea { get; set; }
 
+    public Inventory Inventory { get; private set; } = new();
     private readonly List<InteractTipPanel> _interactTipPanels = new();
     
     public override void _Ready()
     {
+        Global.Player = this;
+        
         base._Ready();
         InteractionArea.AreaEntered += area =>
         {
@@ -38,6 +42,8 @@ public partial class Player : CharacterEntity
                 break;
             }
         };
+
+        EventBus.PlayerReady.Invoke();
     }
     
     protected override void OnPhysicUpdated(State state, float delta)

@@ -7,9 +7,12 @@ public static partial class UiManager
     public static class UiName
     {
         public const string BootSplash = "BootSplash";
+        public const string CharacterUi = "CharacterUi";
         public const string Credits = "Credits";
         public const string Hud = "Hud";
         public const string InteractTip = "InteractTip";
+        public const string InventoryUi = "InventoryUi";
+        public const string ItemCell = "ItemCell";
         public const string LoadingScreen = "LoadingScreen";
         public const string Modal = "Modal";
         public const string PauseMenu = "PauseMenu";
@@ -63,6 +66,54 @@ public static partial class UiManager
     public static Game.Scripts.Ui.BootSplash.BootSplashPanel[] Get_BootSplash_Instance()
     {
         return GetUiInstance<Game.Scripts.Ui.BootSplash.BootSplashPanel>(nameof(Game.Scripts.Ui.BootSplash.BootSplash));
+    }
+
+    /// <summary>
+    /// 创建 CharacterUi, 并返回UI实例, 该函数不会打开 Ui
+    /// </summary>
+    public static Game.Scripts.Ui.CharacterUi.CharacterUiPanel Create_CharacterUi()
+    {
+        return CreateUi<Game.Scripts.Ui.CharacterUi.CharacterUiPanel>(UiName.CharacterUi);
+    }
+
+    /// <summary>
+    /// 打开 CharacterUi, 并返回UI实例
+    /// </summary>
+    public static Game.Scripts.Ui.CharacterUi.CharacterUiPanel Open_CharacterUi()
+    {
+        return OpenUi<Game.Scripts.Ui.CharacterUi.CharacterUiPanel>(UiName.CharacterUi);
+    }
+
+    /// <summary>
+    /// 隐藏 CharacterUi 的所有实例
+    /// </summary>
+    public static void Hide_CharacterUi()
+    {
+        var uiInstance = Get_CharacterUi_Instance();
+        foreach (var uiPanel in uiInstance)
+        {
+            uiPanel.HideUi();
+        }
+    }
+
+    /// <summary>
+    /// 销毁 CharacterUi 的所有实例
+    /// </summary>
+    public static void Destroy_CharacterUi()
+    {
+        var uiInstance = Get_CharacterUi_Instance();
+        foreach (var uiPanel in uiInstance)
+        {
+            uiPanel.Destroy();
+        }
+    }
+
+    /// <summary>
+    /// 获取所有 CharacterUi 的实例, 如果没有实例, 则返回一个空数组
+    /// </summary>
+    public static Game.Scripts.Ui.CharacterUi.CharacterUiPanel[] Get_CharacterUi_Instance()
+    {
+        return GetUiInstance<Game.Scripts.Ui.CharacterUi.CharacterUiPanel>(nameof(Game.Scripts.Ui.CharacterUi.CharacterUi));
     }
 
     /// <summary>
@@ -207,6 +258,102 @@ public static partial class UiManager
     public static Game.Scripts.Ui.InteractTip.InteractTipPanel[] Get_InteractTip_Instance()
     {
         return GetUiInstance<Game.Scripts.Ui.InteractTip.InteractTipPanel>(nameof(Game.Scripts.Ui.InteractTip.InteractTip));
+    }
+
+    /// <summary>
+    /// 创建 InventoryUi, 并返回UI实例, 该函数不会打开 Ui
+    /// </summary>
+    public static Game.Scripts.Ui.InventoryUi.InventoryUiPanel Create_InventoryUi()
+    {
+        return CreateUi<Game.Scripts.Ui.InventoryUi.InventoryUiPanel>(UiName.InventoryUi);
+    }
+
+    /// <summary>
+    /// 打开 InventoryUi, 并返回UI实例
+    /// </summary>
+    public static Game.Scripts.Ui.InventoryUi.InventoryUiPanel Open_InventoryUi()
+    {
+        return OpenUi<Game.Scripts.Ui.InventoryUi.InventoryUiPanel>(UiName.InventoryUi);
+    }
+
+    /// <summary>
+    /// 隐藏 InventoryUi 的所有实例
+    /// </summary>
+    public static void Hide_InventoryUi()
+    {
+        var uiInstance = Get_InventoryUi_Instance();
+        foreach (var uiPanel in uiInstance)
+        {
+            uiPanel.HideUi();
+        }
+    }
+
+    /// <summary>
+    /// 销毁 InventoryUi 的所有实例
+    /// </summary>
+    public static void Destroy_InventoryUi()
+    {
+        var uiInstance = Get_InventoryUi_Instance();
+        foreach (var uiPanel in uiInstance)
+        {
+            uiPanel.Destroy();
+        }
+    }
+
+    /// <summary>
+    /// 获取所有 InventoryUi 的实例, 如果没有实例, 则返回一个空数组
+    /// </summary>
+    public static Game.Scripts.Ui.InventoryUi.InventoryUiPanel[] Get_InventoryUi_Instance()
+    {
+        return GetUiInstance<Game.Scripts.Ui.InventoryUi.InventoryUiPanel>(nameof(Game.Scripts.Ui.InventoryUi.InventoryUi));
+    }
+
+    /// <summary>
+    /// 创建 ItemCell, 并返回UI实例, 该函数不会打开 Ui
+    /// </summary>
+    public static Game.Scripts.Ui.ItemCell.ItemCellPanel Create_ItemCell()
+    {
+        return CreateUi<Game.Scripts.Ui.ItemCell.ItemCellPanel>(UiName.ItemCell);
+    }
+
+    /// <summary>
+    /// 打开 ItemCell, 并返回UI实例
+    /// </summary>
+    public static Game.Scripts.Ui.ItemCell.ItemCellPanel Open_ItemCell()
+    {
+        return OpenUi<Game.Scripts.Ui.ItemCell.ItemCellPanel>(UiName.ItemCell);
+    }
+
+    /// <summary>
+    /// 隐藏 ItemCell 的所有实例
+    /// </summary>
+    public static void Hide_ItemCell()
+    {
+        var uiInstance = Get_ItemCell_Instance();
+        foreach (var uiPanel in uiInstance)
+        {
+            uiPanel.HideUi();
+        }
+    }
+
+    /// <summary>
+    /// 销毁 ItemCell 的所有实例
+    /// </summary>
+    public static void Destroy_ItemCell()
+    {
+        var uiInstance = Get_ItemCell_Instance();
+        foreach (var uiPanel in uiInstance)
+        {
+            uiPanel.Destroy();
+        }
+    }
+
+    /// <summary>
+    /// 获取所有 ItemCell 的实例, 如果没有实例, 则返回一个空数组
+    /// </summary>
+    public static Game.Scripts.Ui.ItemCell.ItemCellPanel[] Get_ItemCell_Instance()
+    {
+        return GetUiInstance<Game.Scripts.Ui.ItemCell.ItemCellPanel>(nameof(Game.Scripts.Ui.ItemCell.ItemCell));
     }
 
     /// <summary>

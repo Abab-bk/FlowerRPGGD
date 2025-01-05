@@ -13,6 +13,7 @@ public partial class Debugger : Node
 {
 #if IMGUI
     private LootTable _allItemsLootTable;
+    private string _addItemId = "";
     
     public override void _Ready()
     {
@@ -38,6 +39,13 @@ public partial class Debugger : Node
             var item = ItemGenerator.GetItem(_allItemsLootTable, null);
             var entity = ItemDropEntity.Create(item);
             Global.World.AddChild(entity);
+        }
+
+        ImGui.InputText("Add Item Id", ref _addItemId, 20);
+        
+        if (ImGui.Button("Add Item"))
+        {
+            Global.PlayerInventory.AddItem(new Item(Data.Tables.TbItems.Get(_addItemId)));
         }
 
         ImGui.End();
