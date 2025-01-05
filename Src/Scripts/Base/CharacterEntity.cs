@@ -4,6 +4,7 @@ using DataBase;
 using Game.AnimationProcessors;
 using Game.Scripts.Classes;
 using Game.Scripts.Interfaces;
+using Game.Scripts.Stats;
 using Godot;
 
 namespace Game.Scripts.Base;
@@ -14,6 +15,7 @@ public partial class CharacterEntity : CharacterBody2D, IGameEntity
     
     public List<Component> Components { get; } = new List<Component>();
     public CharacterInfo CharacterInfo { get; protected set; }
+    public CharacterStats Stats { get; protected set; }
     
     public bool IsMultiplayer { get; protected set; }
     protected string Sprite { get; set; }
@@ -31,6 +33,8 @@ public partial class CharacterEntity : CharacterBody2D, IGameEntity
         StateMachine.Transited += OnTransited;
         StateMachine.Updated += OnUpdated;
         StateMachine.PhysicUpdated += OnPhysicUpdated;
+
+        Stats = new CharacterStats(CharacterInfo.Stats);
         
         InitSprite();
         

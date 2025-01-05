@@ -1,0 +1,114 @@
+[
+  {
+    "id": "i_sword1",
+    "name": "Sword1",
+    "item_type": 0,
+    "value": 100,
+    "rarity": 0
+  },
+  {
+    "id": "1",
+    "name": "Sword2",
+    "item_type": 0,
+    "value": 100,
+    "rarity": 0
+  },
+  {
+    "id": "2",
+    "name": "Sword3",
+    "item_type": 0,
+    "value": 100,
+    "rarity": 0
+  },
+  {
+    "id": "3",
+    "name": "Sword4",
+    "item_type": 0,
+    "value": 100,
+    "rarity": 0
+  },
+  {
+    "id": "4",
+    "name": "Sword5",
+    "item_type": 0,
+    "value": 100,
+    "rarity": 0
+  },
+  {
+    "id": "5",
+    "name": "Sword6",
+    "item_type": 0,
+    "value": 100,
+    "rarity": 0
+  },
+  {
+    "id": "6",
+    "name": "Sword7",
+    "item_type": 0,
+    "value": 100,
+    "rarity": 0
+  },
+  {
+    "id": "7",
+    "name": "Sword8",
+    "item_type": 0,
+    "value": 100,
+    "rarity": 0
+  },
+  {
+    "id": "8",
+    "name": "Sword9",
+    "item_type": 0,
+    "value": 100,
+    "rarity": 0
+  },
+  {
+    "id": "9",
+    "name": "Sword10",
+    "item_type": 0,
+    "value": 100,
+    "rarity": 0
+  },
+  {
+    "id": "10",
+    "name": "Sword11",
+    "item_type": 0,
+    "value": 100,
+    "rarity": 0
+  },
+  {
+    "id": "11",
+    "name": "Sword12",
+    "item_type": 0,
+    "value": 100,
+    "rarity": 0
+  },
+  {
+    "id": "12",
+    "name": "Sword13",
+    "item_type": 0,
+    "value": 100,
+    "rarity": 0
+  },
+  {
+    "id": "13",
+    "name": "Sword14",
+    "item_type": 0,
+    "value": 100,
+    "rarity": 0
+  },
+  {
+    "id": "14",
+    "name": "Sword15",
+    "item_type": 0,
+    "value": 100,
+    "rarity": 0
+  },
+  {
+    "id": "15",
+    "name": "Sword16",
+    "item_type": 0,
+    "value": 100,
+    "rarity": 0
+  }
+]

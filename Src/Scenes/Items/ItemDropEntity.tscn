@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://benugrlwww4t2"]
+
+[ext_resource type="Script" path="res://Scripts/Items/ItemDropEntity.cs" id="1_r3xy1"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pj82w"]
+bg_color = Color(0.584272, 0.607155, 0.591791, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_24ilc"]
+size = Vector2(42, 44)
+
+[node name="ItemDropEntity" type="CharacterBody2D" node_paths=PackedStringArray("_label", "_sprite")]
+collision_layer = 0
+script = ExtResource("1_r3xy1")
+_label = NodePath("Label")
+_sprite = NodePath("Sprite2D")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="Label" type="Label" parent="."]
+offset_left = -29.0
+offset_right = 35.0
+offset_bottom = 23.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_pj82w")
+text = "Item"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_24ilc")

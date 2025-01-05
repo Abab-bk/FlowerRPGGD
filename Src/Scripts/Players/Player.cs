@@ -6,6 +6,8 @@ namespace Game.Scripts.Players;
 
 public partial class Player : CharacterEntity
 {
+    [Export] private Area2D InteractionArea { get; set; }
+    
     protected override void OnPhysicUpdated(State state, float delta)
     {
         base.OnPhysicUpdated(state, delta);
@@ -15,7 +17,7 @@ public partial class Player : CharacterEntity
                 var x = Input.GetAxis(
                     "Left",
                     "Right"
-                    ) * CharacterInfo.Stats.Speed;
+                    ) * Stats.Speed.Value;
 
                 if (IsOnFloor() && Input.IsActionJustPressed("Jump"))
                 {

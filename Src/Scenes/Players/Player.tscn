@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://863bf1a44uea"]
+[gd_scene load_steps=20 format=3 uid="uid://863bf1a44uea"]
 
 [ext_resource type="PackedScene" uid="uid://cxf6a06c26omo" path="res://Scenes/Base/CharacterEntity.tscn" id="1_egjb1"]
 [ext_resource type="Script" path="res://Scripts/Players/Player.cs" id="1_i1d4v"]
@@ -105,6 +105,9 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fcvs6"]
 size = Vector2(17, 44)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u1bff"]
+size = Vector2(198, 92)
+
 [node name="Player" instance=ExtResource("1_egjb1")]
 collision_layer = 2
 script = ExtResource("1_i1d4v")
@@ -113,7 +116,7 @@ script = ExtResource("1_i1d4v")
 sprite_frames = SubResource("SpriteFrames_vs6ck")
 animation = &"Idle"
 autoplay = "Idle"
-frame_progress = 0.631664
+frame_progress = 0.158548
 
 [node name="CollisionShape2D" parent="." index="1"]
 position = Vector2(0.5, 1)
@@ -121,3 +124,10 @@ shape = SubResource("RectangleShape2D_fcvs6")
 
 [node name="Camera2D" type="Camera2D" parent="." index="3"]
 zoom = Vector2(2.5, 2.5)
+
+[node name="InteractionArea" type="Area2D" parent="." index="4"]
+collision_layer = 0
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea" index="0"]
+shape = SubResource("RectangleShape2D_u1bff")
