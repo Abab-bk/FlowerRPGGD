@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b4e63o51ejx0e"
-path="res://.godot/imported/Base.png-c7275c499a7910c30f1fbfe22001573c.ctex"
+uid="uid://cx4xna3up1yla"
+path="res://.godot/imported/Props-Rocks.png-8db4066f5800fa967b5106e5097cb792.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Characters/Base.png"
-dest_files=["res://.godot/imported/Base.png-c7275c499a7910c30f1fbfe22001573c.ctex"]
+source_file="res://Assets/Textures/TestMap/Props-Rocks.png"
+dest_files=["res://.godot/imported/Props-Rocks.png-8db4066f5800fa967b5106e5097cb792.ctex"]
 
 [params]
 

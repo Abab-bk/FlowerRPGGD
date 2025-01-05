@@ -16,7 +16,7 @@ public partial class PlayerController(Player player) : Node
         var dir = Input.GetVector(
             "Left",
             "Right",
-            "Up",
+            "Jump",
             "Down"
         );
         

@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using cfg.Characters;
+using DataBase;
 using Game.AnimationProcessors;
 using Game.Scripts.Classes;
 using Game.Scripts.Interfaces;
@@ -9,10 +10,9 @@ namespace Game.Scripts.Base;
 
 public partial class CharacterEntity : CharacterBody2D, IGameEntity
 {
-    [Export] private AnimatedSprite2D AnimatedSprite2D { get; set; }
+    [Export] protected AnimatedSprite2D AnimatedSprite2D { get; set; }
     
     public List<Component> Components { get; } = new List<Component>();
-    public int Id { get; protected set; }
     public CharacterInfo CharacterInfo { get; protected set; }
     
     public bool IsMultiplayer { get; protected set; }
@@ -32,17 +32,23 @@ public partial class CharacterEntity : CharacterBody2D, IGameEntity
         StateMachine.Updated += OnUpdated;
         StateMachine.PhysicUpdated += OnPhysicUpdated;
         
+        InitSprite();
+        
+        TickSystem.OnTick += OnTick;
+    }
+
+    protected virtual void InitSprite()
+    {
         var processor = new DefaultAnimationProcessor();
         AnimatedSprite2D.SpriteFrames = processor.Process(
             IsMultiplayer ? Sprite : $"res://Assets/Characters/{CharacterInfo.Sprite}.png"
         );
         AnimatedSprite2D.Animation = "Idle";
-        
-        TickSystem.OnTick += OnTick;
     }
-    
+
     protected virtual void OnPhysicUpdated(State state, float delta)
     {
+        Velocity = Velocity with { Y = Velocity.Y + Data.Constants.Gravity * delta };
     }
 
     protected virtual void OnUpdated(State state, float delta)

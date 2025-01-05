@@ -1,7 +1,6 @@
-﻿using AcidUtilities;
-using DataBase;
+﻿using DataBase;
 using DsUi;
-using Game.Scripts.Players;
+using Game.Scripts.Maps;
 using Godot;
 
 namespace Game.Scripts;
@@ -16,6 +15,12 @@ public partial class World : Node2D
         AddChild(new TickSystem());
         
         var saveData = Global.AppSaver.GameSave;
+        
+        var level = Data.Tables.TbMaps.Get("map_test");
+        var mapNode = GD.Load<PackedScene>
+            ($"res://Scenes/Maps/{level.SceneName}.tscn").Instantiate<Map>();
+        AddChild(mapNode);
+        mapNode.Init();
         
         Logger.Log("[World] Ready");
     }

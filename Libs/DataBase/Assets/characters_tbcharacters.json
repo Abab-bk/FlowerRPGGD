@@ -13,7 +13,7 @@
     "id": "c_guide",
     "name": "Guide",
     "level": 1,
-    "sprite": "Undead",
+    "sprite": "Base",
     "stats": {
       "max_health": 100,
       "speed": 300

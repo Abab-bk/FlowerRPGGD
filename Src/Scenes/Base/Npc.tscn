@@ -1,0 +1,7 @@
+[gd_scene load_steps=3 format=3 uid="uid://cw56f3tclb161"]
+
+[ext_resource type="PackedScene" uid="uid://cxf6a06c26omo" path="res://Scenes/Base/CharacterEntity.tscn" id="1_4as6u"]
+[ext_resource type="Script" path="res://Scripts/Npcs/Npc.cs" id="2_v2cbe"]
+
+[node name="Npc" instance=ExtResource("1_4as6u")]
+script = ExtResource("2_v2cbe")

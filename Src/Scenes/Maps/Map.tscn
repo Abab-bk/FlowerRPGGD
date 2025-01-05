@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://bes1n6omwjmam"]
+
+[ext_resource type="Script" path="res://Scripts/Maps/Map.cs" id="1_p0jpb"]
+
+[node name="Map" type="Node2D" node_paths=PackedStringArray("_tileMapLayer", "_signs")]
+texture_filter = 1
+script = ExtResource("1_p0jpb")
+_tileMapLayer = NodePath("TileMapLayer")
+_signs = NodePath("Signs")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+
+[node name="Signs" type="Node2D" parent="."]

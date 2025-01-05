@@ -47,6 +47,7 @@ transition_config_list = Array[TransitionConfig]([SubResource("TransitionConfig_
 variable_config_list = Array[VariableConfig]([SubResource("VariableConfig_8rm1o"), SubResource("VariableConfig_ea1g3")])
 
 [node name="CharacterEntity" type="CharacterBody2D" node_paths=PackedStringArray("AnimatedSprite2D")]
+texture_filter = 1
 script = ExtResource("1_yqh5k")
 AnimatedSprite2D = NodePath("AnimatedSprite2D")
 

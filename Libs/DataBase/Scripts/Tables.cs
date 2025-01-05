@@ -16,11 +16,13 @@ public partial class Tables
 {
     public TbConstants TbConstants {get; }
     public Characters.TbCharacters TbCharacters {get; }
+    public Maps.TbMaps TbMaps {get; }
 
     public Tables(System.Func<string, JsonElement> loader)
     {
         TbConstants = new TbConstants(loader("tbconstants"));
         TbCharacters = new Characters.TbCharacters(loader("characters_tbcharacters"));
+        TbMaps = new Maps.TbMaps(loader("maps_tbmaps"));
         ResolveRef();
     }
     
@@ -28,6 +30,7 @@ public partial class Tables
     {
         TbConstants.ResolveRef(this);
         TbCharacters.ResolveRef(this);
+        TbMaps.ResolveRef(this);
     }
 }
 

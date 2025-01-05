@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://cvy7q7pei7k2i"]
+
+[ext_resource type="Texture2D" uid="uid://b4e63o51ejx0e" path="res://Assets/Characters/Base.png" id="1_ivbyp"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dtuo8"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dyhpn"]
+atlas = ExtResource("1_ivbyp")
+region = Rect2(31, 21, 17, 43)
+
+[node name="Test" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_dtuo8")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("AtlasTexture_dyhpn")

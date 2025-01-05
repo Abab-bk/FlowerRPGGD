@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b4e63o51ejx0e"
-path="res://.godot/imported/Base.png-c7275c499a7910c30f1fbfe22001573c.ctex"
+uid="uid://cjqqq1xd828v5"
+path="res://.godot/imported/Hive.png-10212bb3f10643a3fa8034e38b5d989c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Characters/Base.png"
-dest_files=["res://.godot/imported/Base.png-c7275c499a7910c30f1fbfe22001573c.ctex"]
+source_file="res://Assets/Textures/TestMap/Hive.png"
+dest_files=["res://.godot/imported/Hive.png-10212bb3f10643a3fa8034e38b5d989c.ctex"]
 
 [params]
 

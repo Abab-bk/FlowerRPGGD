@@ -14,7 +14,7 @@ public class DefaultAnimationProcessor : IAnimationProcessor
         var atlas = new AtlasTexture
         {
             Atlas = texture,
-            Region = new Rect2(0, 0, 64, 64)
+            Region = new Rect2(31, 21, 17, 43)
         };
         spriteFrames.AddFrame("Idle", atlas);
         

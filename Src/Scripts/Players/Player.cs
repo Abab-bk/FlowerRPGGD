@@ -8,18 +8,33 @@ public partial class Player : CharacterEntity
 {
     protected override void OnPhysicUpdated(State state, float delta)
     {
+        base.OnPhysicUpdated(state, delta);
         switch (state.GetName())
         {
             case "Running":
-                Velocity = Input.GetVector(
+                var x = Input.GetAxis(
                     "Left",
-                    "Right",
-                    "Up",
-                    "Down"
-                ) * CharacterInfo.Stats.Speed;
-                MoveAndSlide();
+                    "Right"
+                    ) * CharacterInfo.Stats.Speed;
+
+                if (IsOnFloor() && Input.IsActionJustPressed("Jump"))
+                {
+                    Velocity = Velocity with { Y = Velocity.Y - 300f };
+                }
+
+                Velocity = Velocity with { X = x };
+                
+                break;
+            case "Idle":
+                Velocity = Velocity with { X = 0f };
                 break;
         }
+        AnimatedSprite2D.FlipH = GlobalPosition.X > GetGlobalMousePosition().X;
+        MoveAndSlide();
+    }
+
+    protected override void InitSprite()
+    {
     }
 
     protected override void OnUpdated(State state, float delta)
@@ -28,14 +43,22 @@ public partial class Player : CharacterEntity
 
     protected override void OnTransited(State from, State to)
     {
+        switch (to.GetName())
+        {
+            case "Idle":
+                AnimatedSprite2D.Play("Idle");
+                break;
+            case "Running":
+                AnimatedSprite2D.Play("Running");
+                break;
+        }
     }
     
-    public static Player Create(CharacterInfo characterInfo, int id)
+    public static Player Create(CharacterInfo characterInfo)
     {
         var player = GD.Load<PackedScene>("res://Scenes/Players/Player.tscn")
             .Instantiate<Player>();
         player.CharacterInfo = characterInfo;
-        player.Id = id;
         return player;
     }
 }

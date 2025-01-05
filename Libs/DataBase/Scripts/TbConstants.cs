@@ -36,6 +36,10 @@ public partial class TbConstants
     /// Resolutions
     /// </summary>
      public Godot.Vector2[] Resolutions => _data.Resolutions;
+    /// <summary>
+    /// Gravity
+    /// </summary>
+     public float Gravity => _data.Gravity;
     
     public void ResolveRef(Tables tables)
     {
