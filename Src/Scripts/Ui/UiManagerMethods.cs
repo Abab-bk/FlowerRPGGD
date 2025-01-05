@@ -9,6 +9,7 @@ public static partial class UiManager
         public const string BootSplash = "BootSplash";
         public const string Credits = "Credits";
         public const string Hud = "Hud";
+        public const string InteractTip = "InteractTip";
         public const string LoadingScreen = "LoadingScreen";
         public const string Modal = "Modal";
         public const string PauseMenu = "PauseMenu";
@@ -158,6 +159,54 @@ public static partial class UiManager
     public static Game.Scripts.Ui.Hud.HudPanel[] Get_Hud_Instance()
     {
         return GetUiInstance<Game.Scripts.Ui.Hud.HudPanel>(nameof(Game.Scripts.Ui.Hud.Hud));
+    }
+
+    /// <summary>
+    /// 创建 InteractTip, 并返回UI实例, 该函数不会打开 Ui
+    /// </summary>
+    public static Game.Scripts.Ui.InteractTip.InteractTipPanel Create_InteractTip()
+    {
+        return CreateUi<Game.Scripts.Ui.InteractTip.InteractTipPanel>(UiName.InteractTip);
+    }
+
+    /// <summary>
+    /// 打开 InteractTip, 并返回UI实例
+    /// </summary>
+    public static Game.Scripts.Ui.InteractTip.InteractTipPanel Open_InteractTip()
+    {
+        return OpenUi<Game.Scripts.Ui.InteractTip.InteractTipPanel>(UiName.InteractTip);
+    }
+
+    /// <summary>
+    /// 隐藏 InteractTip 的所有实例
+    /// </summary>
+    public static void Hide_InteractTip()
+    {
+        var uiInstance = Get_InteractTip_Instance();
+        foreach (var uiPanel in uiInstance)
+        {
+            uiPanel.HideUi();
+        }
+    }
+
+    /// <summary>
+    /// 销毁 InteractTip 的所有实例
+    /// </summary>
+    public static void Destroy_InteractTip()
+    {
+        var uiInstance = Get_InteractTip_Instance();
+        foreach (var uiPanel in uiInstance)
+        {
+            uiPanel.Destroy();
+        }
+    }
+
+    /// <summary>
+    /// 获取所有 InteractTip 的实例, 如果没有实例, 则返回一个空数组
+    /// </summary>
+    public static Game.Scripts.Ui.InteractTip.InteractTipPanel[] Get_InteractTip_Instance()
+    {
+        return GetUiInstance<Game.Scripts.Ui.InteractTip.InteractTipPanel>(nameof(Game.Scripts.Ui.InteractTip.InteractTip));
     }
 
     /// <summary>

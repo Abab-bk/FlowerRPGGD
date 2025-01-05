@@ -18,7 +18,10 @@ public partial class Map : Node2D
             switch (signNode.SignType)
             {
                 case SignType.Npc:
-                    var npc = Npc.Create(Data.Tables.TbCharacters.Get(signNode.Content));
+                    var npc = Npc.Create(new NpcConfig(
+                        signNode,
+                        Data.Tables.TbCharacters.Get(signNode.Content)
+                        ));
                     AddChild(npc);
                     npc.GlobalPosition = signNode.GlobalPosition;
                     continue;

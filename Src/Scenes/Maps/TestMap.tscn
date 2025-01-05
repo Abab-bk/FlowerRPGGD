@@ -511,3 +511,4 @@ position = Vector2(128, 976)
 script = ExtResource("3_6aq71")
 SignType = 1
 Content = "c_guide"
+InteractionType = 1

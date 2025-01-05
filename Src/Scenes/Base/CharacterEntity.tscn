@@ -46,10 +46,11 @@ state_config_list = Array[StateConfig]([SubResource("StateConfig_ts4ni"), SubRes
 transition_config_list = Array[TransitionConfig]([SubResource("TransitionConfig_5mfad"), SubResource("TransitionConfig_fvb5v")])
 variable_config_list = Array[VariableConfig]([SubResource("VariableConfig_8rm1o"), SubResource("VariableConfig_ea1g3")])
 
-[node name="CharacterEntity" type="CharacterBody2D" node_paths=PackedStringArray("AnimatedSprite2D")]
+[node name="CharacterEntity" type="CharacterBody2D" node_paths=PackedStringArray("AnimatedSprite2D", "CollisionShape2D")]
 texture_filter = 1
 script = ExtResource("1_yqh5k")
 AnimatedSprite2D = NodePath("AnimatedSprite2D")
+CollisionShape2D = NodePath("CollisionShape2D")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 

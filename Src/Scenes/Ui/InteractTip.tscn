@@ -1,0 +1,24 @@
+[gd_scene load_steps=2 format=3 uid="uid://c6v56ot14otf5"]
+
+[ext_resource type="Script" path="res://Scripts/Ui/interactTip/InteractTipPanel.cs" id="1_sm0o1"]
+
+[node name="InteractTip" type="Control"]
+custom_minimum_size = Vector2(200, 30)
+layout_mode = 3
+anchors_preset = 0
+offset_left = -96.0
+offset_right = 104.0
+offset_bottom = 30.0
+script = ExtResource("1_sm0o1")
+
+[node name="Label" type="Label" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Presse E to dialogue"
+horizontal_alignment = 1
+vertical_alignment = 1

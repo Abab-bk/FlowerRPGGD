@@ -106,11 +106,12 @@ animations = [{
 size = Vector2(17, 44)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u1bff"]
-size = Vector2(198, 92)
+size = Vector2(76, 92)
 
-[node name="Player" instance=ExtResource("1_egjb1")]
+[node name="Player" node_paths=PackedStringArray("InteractionArea") instance=ExtResource("1_egjb1")]
 collision_layer = 2
 script = ExtResource("1_i1d4v")
+InteractionArea = NodePath("InteractionArea")
 
 [node name="AnimatedSprite2D" parent="." index="0"]
 sprite_frames = SubResource("SpriteFrames_vs6ck")
@@ -127,7 +128,8 @@ zoom = Vector2(2.5, 2.5)
 
 [node name="InteractionArea" type="Area2D" parent="." index="4"]
 collision_layer = 0
-collision_mask = 4
+collision_mask = 16
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea" index="0"]
 shape = SubResource("RectangleShape2D_u1bff")
+debug_color = Color(0.829516, 0.341638, 0.516487, 0.42)

@@ -86,7 +86,8 @@ public partial class Application : Node2D
                 break;
             case "InBootSplash":
                 if (
-                    Environment.GetCommandLineArgs().Contains("--SkipBootSplash")
+                    Environment.GetCommandLineArgs().Contains("--SkipBootSplash") ||
+                    OS.HasFeature("editor")
                 )
                 {
                     Logger.Log("[Application] Has --SkipBootSplash");
@@ -105,7 +106,8 @@ public partial class Application : Node2D
             case "InStartMenu":
                 if (
                     Environment.GetCommandLineArgs().Contains("--SkipStartMenu") &&
-                    !Global.Flags.Contains("SkippedStartMenu")
+                    !Global.Flags.Contains("SkippedStartMenu") ||
+                    OS.HasFeature("editor")
                     )
                 {
                     Logger.Log("[Application] Has --SkipStartMenu");

@@ -57,6 +57,11 @@ public static class Logger
         _logger.LogInformation(message);
     }
     
+    public static void Debug(string message)
+    {
+        _logger.LogDebug(message);
+    }
+    
     /// <summary>
     /// 输出错误日志
     /// </summary>

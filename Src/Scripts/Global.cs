@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using Game.Scripts.Players;
+using Game.Scripts.Ui.Hud;
 
 namespace Game.Scripts;
 
@@ -8,6 +9,7 @@ public static class Global
     public static readonly List<string> Flags = new();
     public static World World { get; set; }
     public static Application Application { get; set; }
+    public static HudPanel Hud { get; set; }
     
     public static List<Player> PlayerEntities = new();
     
