@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://dc84phpfrj5rv"]
+
+[ext_resource type="Script" path="res://Scripts/Weapons/Weapon.cs" id="1_1h2f3"]
+[ext_resource type="Texture2D" uid="uid://bf8wgls25ncws" path="res://Assets/Weapons/fantasy_epicweapons_pack1_nobg.png" id="2_dyq3l"]
+[ext_resource type="Script" path="res://Scripts/Prefabs/HitBox.cs" id="2_ifk3t"]
+
+[node name="Weapon" type="Node2D" node_paths=PackedStringArray("_hitBox")]
+script = ExtResource("1_1h2f3")
+_hitBox = NodePath("HitBox")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+rotation = 0.785398
+texture = ExtResource("2_dyq3l")
+region_enabled = true
+region_rect = Rect2(0, 0, 32, 32)
+
+[node name="HitBox" type="Area2D" parent="."]
+scale = Vector2(1, 1)
+script = ExtResource("2_ifk3t")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]

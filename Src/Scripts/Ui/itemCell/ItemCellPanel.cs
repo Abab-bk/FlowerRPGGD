@@ -1,12 +1,13 @@
 using Game.Scripts.Items;
+using RPGCore.Items;
 
 namespace Game.Scripts.Ui.ItemCell;
 
 public partial class ItemCellPanel : ItemCell
 {
-    public IITem Item { get; set; }
+    public IItem Item { get; set; }
     
-    public ItemCellPanel Config(IITem item)
+    public ItemCellPanel Config(IItem item)
     {
         Item = item;
         return this;

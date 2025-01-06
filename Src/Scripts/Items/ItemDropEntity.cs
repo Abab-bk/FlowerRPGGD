@@ -1,5 +1,6 @@
 using DataBase;
 using Godot;
+using RPGCore.Items;
 
 namespace Game.Scripts.Items;
 
@@ -8,7 +9,7 @@ public partial class ItemDropEntity : CharacterBody2D
     [Export] private Label _label;
     [Export] private Sprite2D _sprite;
     
-    private Item _item;
+    private IItem _item;
 
     public override void _PhysicsProcess(double delta)
     {
@@ -16,7 +17,7 @@ public partial class ItemDropEntity : CharacterBody2D
         MoveAndSlide();
     }
 
-    public static ItemDropEntity Create(Item item)
+    public static ItemDropEntity Create(IItem item)
     {
         var scene = GD.Load<PackedScene>("res://Scenes/Items/ItemDropEntity.tscn");
         var instance = scene.Instantiate<ItemDropEntity>();

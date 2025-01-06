@@ -1,11 +1,12 @@
 ﻿using System.Collections.Generic;
 using DataBase;
 using Game.Scripts.Items;
-using Game.Scripts.Loots;
 using Godot;
 using ImGuiGodot;
 using ImGuiNET;
 using KaimiraGames;
+using RPGCore.Items;
+using RPGCore.Loots;
 
 namespace Game.Scripts;
 
@@ -45,7 +46,7 @@ public partial class Debugger : Node
         
         if (ImGui.Button("Add Item"))
         {
-            Global.PlayerInventory.AddItem(new Item(Data.Tables.TbItems.Get(_addItemId)));
+            Global.PlayerInventory.AddItem(new UniqueItem(Data.Tables.TbItems.Get(_addItemId)));
         }
 
         ImGui.End();

@@ -2,7 +2,7 @@
 using cfg.Stats;
 using FlowerRpg.Stats;
 
-namespace Game.Scripts.Stats;
+namespace RPGCore.Stats;
 
 public class CharacterStats(StatsInfo info) : IStats
 {
@@ -26,7 +26,7 @@ public class CharacterStats(StatsInfo info) : IStats
                 return Health;
         }
         
-        throw new System.NotImplementedException();
+        throw new NotImplementedException();
     }
 
     public IStat GetStat(int statType)
@@ -39,6 +39,6 @@ public class CharacterStats(StatsInfo info) : IStats
                 return Health.MaxValue;
         }
         
-        throw new System.NotImplementedException();
+        throw new NotImplementedException();
     }
 }

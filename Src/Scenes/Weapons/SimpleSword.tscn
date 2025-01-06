@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://cpn5dydym41se"]
+
+[ext_resource type="PackedScene" uid="uid://dc84phpfrj5rv" path="res://Scenes/Weapons/Weapon.tscn" id="1_0d863"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xoyim"]
+size = Vector2(36, 8)
+
+[node name="SimpleSword" instance=ExtResource("1_0d863")]
+
+[node name="Sprite2D" parent="." index="0"]
+rotation = 2.35619
+
+[node name="CollisionShape2D" parent="HitBox" index="0"]
+position = Vector2(5, 0)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_xoyim")

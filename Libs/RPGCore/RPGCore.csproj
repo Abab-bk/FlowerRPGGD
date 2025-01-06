@@ -7,16 +7,12 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Luban\Luban.csproj" />
+      <ProjectReference Include="..\DataBase\DataBase.csproj" />
+      <ProjectReference Include="..\Shared\Shared.csproj" />
     </ItemGroup>
 
     <ItemGroup>
-        <Content Include="Assets\**\*.json"
-                 CopyToOutputDirectory="PreserveNewest" />
-    </ItemGroup>
-
-    <ItemGroup>
-      <PackageReference Include="GodotSharp" Version="4.3.0" />
+      <PackageReference Include="FlowerRpg.Stats" Version="2.1.0" />
     </ItemGroup>
 
 </Project>

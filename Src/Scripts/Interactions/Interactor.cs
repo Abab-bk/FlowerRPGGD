@@ -15,7 +15,7 @@ public partial class Interactor(
         CollisionLayer = 0;
         CollisionMask = 0;
         
-        SetCollisionLayerValue((int)Enums.CollisionLayer.Interaction, true);
+        SetCollisionLayerValue((int)Enums.CollisionLayerName.Interaction, true);
         
         AddChild(new CollisionShape2D
         {

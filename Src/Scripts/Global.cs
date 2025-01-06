@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using Game.Scripts.Inventories;
 using Game.Scripts.Players;
 using Game.Scripts.Ui.Hud;
+using RPGCore.Inventories;
 
 namespace Game.Scripts;
 
@@ -12,7 +12,7 @@ public static class Global
     public static Application Application { get; set; }
     public static HudPanel Hud { get; set; }
     public static Player Player { get; set; }
-    public static Inventory PlayerInventory => Player.Inventory;
+    public static SizedInventory PlayerInventory => Player.Inventory;
     
     public static List<Player> PlayerEntities = new();
     

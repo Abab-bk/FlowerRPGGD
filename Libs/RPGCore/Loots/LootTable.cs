@@ -1,7 +1,6 @@
-﻿using System.Collections.Generic;
-using KaimiraGames;
+﻿using KaimiraGames;
 
-namespace Game.Scripts.Loots;
+namespace RPGCore.Loots;
 
 public class LootTable(List<WeightedListItem<string>> items)
 {

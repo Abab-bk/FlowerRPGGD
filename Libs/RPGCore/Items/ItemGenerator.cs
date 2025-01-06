@@ -1,18 +1,18 @@
 ﻿using DataBase;
-using Game.Scripts.Loots;
-using Game.Scripts.Stats;
+using RPGCore.Loots;
+using RPGCore.Stats;
 
-namespace Game.Scripts.Items;
+namespace RPGCore.Items;
 
 public static class ItemGenerator
 {
-    public static Item GetItem(
+    public static IItem GetItem(
         LootTable lootTable,
         CharacterStats stats
-        )
+    )
     {
         var itemId = lootTable.GetItem();
-        var item = new Item(Data.Tables.TbItems.Get(itemId));
+        var item = new UniqueItem(Data.Tables.TbItems.Get(itemId));
         return item;
     }
 }

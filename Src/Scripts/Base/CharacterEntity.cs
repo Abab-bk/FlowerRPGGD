@@ -1,11 +1,9 @@
-﻿using System.Collections.Generic;
-using cfg.Characters;
+﻿using cfg.Characters;
 using DataBase;
 using Game.AnimationProcessors;
-using Game.Scripts.Classes;
 using Game.Scripts.Interfaces;
-using Game.Scripts.Stats;
 using Godot;
+using RPGCore.Stats;
 
 namespace Game.Scripts.Base;
 
@@ -13,8 +11,6 @@ public partial class CharacterEntity : CharacterBody2D, IGameEntity
 {
     [Export] protected AnimatedSprite2D AnimatedSprite2D { get; set; }
     [Export] protected CollisionShape2D CollisionShape2D { get; set; }
-    
-    public List<Component> Components { get; } = new List<Component>();
     public CharacterInfo CharacterInfo { get; protected set; }
     public CharacterStats Stats { get; protected set; }
     

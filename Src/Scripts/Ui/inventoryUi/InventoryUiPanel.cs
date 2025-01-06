@@ -1,14 +1,14 @@
 using DsUi;
-using Game.Scripts.Inventories;
 using Game.Scripts.Ui.ItemCell;
+using RPGCore.Inventories;
 
 namespace Game.Scripts.Ui.InventoryUi;
 
 public partial class InventoryUiPanel : InventoryUi
 {
-    public Inventory Inventory { get; private set; }
+    public SizedInventory Inventory { get; private set; }
     
-    public InventoryUiPanel Config(Inventory inventory)
+    public InventoryUiPanel Config(SizedInventory inventory)
     {
         Inventory = inventory;
         

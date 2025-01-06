@@ -10,6 +10,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataBase", "..\Libs\DataBas
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestProject", "..\Libs\TestProject\TestProject.csproj", "{9671F5CC-F0B3-426C-87EF-261A795E22CB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RPGCore", "..\Libs\RPGCore\RPGCore.csproj", "{ACEAE192-C05C-49CC-9A2D-84C2CF7AA06C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shared", "..\Libs\Shared\Shared.csproj", "{BF26485D-2852-4DC7-8C47-E31BA522CC4C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 	Debug|Any CPU = Debug|Any CPU
@@ -47,5 +51,17 @@ Global
 		{9671F5CC-F0B3-426C-87EF-261A795E22CB}.ExportDebug|Any CPU.Build.0 = Debug|Any CPU
 		{9671F5CC-F0B3-426C-87EF-261A795E22CB}.ExportRelease|Any CPU.ActiveCfg = Debug|Any CPU
 		{9671F5CC-F0B3-426C-87EF-261A795E22CB}.ExportRelease|Any CPU.Build.0 = Debug|Any CPU
+		{ACEAE192-C05C-49CC-9A2D-84C2CF7AA06C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACEAE192-C05C-49CC-9A2D-84C2CF7AA06C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACEAE192-C05C-49CC-9A2D-84C2CF7AA06C}.ExportDebug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACEAE192-C05C-49CC-9A2D-84C2CF7AA06C}.ExportDebug|Any CPU.Build.0 = Debug|Any CPU
+		{ACEAE192-C05C-49CC-9A2D-84C2CF7AA06C}.ExportRelease|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACEAE192-C05C-49CC-9A2D-84C2CF7AA06C}.ExportRelease|Any CPU.Build.0 = Debug|Any CPU
+		{BF26485D-2852-4DC7-8C47-E31BA522CC4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF26485D-2852-4DC7-8C47-E31BA522CC4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF26485D-2852-4DC7-8C47-E31BA522CC4C}.ExportDebug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF26485D-2852-4DC7-8C47-E31BA522CC4C}.ExportDebug|Any CPU.Build.0 = Debug|Any CPU
+		{BF26485D-2852-4DC7-8C47-E31BA522CC4C}.ExportRelease|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF26485D-2852-4DC7-8C47-E31BA522CC4C}.ExportRelease|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 EndGlobal

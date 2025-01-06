@@ -5,5 +5,4 @@ namespace Game.Scripts.Interfaces;
 
 public interface IGameEntity
 {
-    public List<Component> Components { get; }
 }

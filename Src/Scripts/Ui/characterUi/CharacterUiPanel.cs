@@ -1,10 +1,10 @@
-using Game.Scripts.Inventories;
+using RPGCore.Inventories;
 
 namespace Game.Scripts.Ui.CharacterUi;
 
 public partial class CharacterUiPanel : CharacterUi
 {
-    public void Config(Inventory inventory)
+    public void Config(SizedInventory inventory)
     {
         S_InventoryUi.Instance.Config(inventory);
     }
