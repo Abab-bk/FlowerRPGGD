@@ -14,7 +14,7 @@ public partial class Debugger : Node
 {
 #if IMGUI
     private LootTable _allItemsLootTable;
-    private string _addItemId = "";
+    private string _addItemId = "i_sword1";
     
     public override void _Ready()
     {
@@ -47,6 +47,13 @@ public partial class Debugger : Node
         if (ImGui.Button("Add Item"))
         {
             Global.PlayerInventory.AddItem(new UniqueItem(Data.Tables.TbItems.Get(_addItemId)));
+        }
+
+        if (ImGui.Button("Equip Weapon"))
+        {
+            Global.Player.Equipments.Weapon.Store(
+                new UniqueItem(Data.Tables.TbItems.Get(_addItemId))
+                );
         }
 
         ImGui.End();

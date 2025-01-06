@@ -15,7 +15,6 @@ region_enabled = true
 region_rect = Rect2(0, 0, 32, 32)
 
 [node name="HitBox" type="Area2D" parent="."]
-scale = Vector2(1, 1)
 script = ExtResource("2_ifk3t")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]

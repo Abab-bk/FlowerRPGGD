@@ -5,8 +5,11 @@ using Godot;
 using cfg.Characters;
 using Game.Scripts.Base;
 using Game.Scripts.Interactions;
+using Game.Scripts.Items;
 using Game.Scripts.Ui.InteractTip;
+using Game.Scripts.Weapons;
 using RPGCore.Inventories;
+using RPGCore.Players;
 
 namespace Game.Scripts.Players;
 
@@ -16,6 +19,8 @@ public partial class Player : CharacterEntity
     [Export] private Marker2D WeaponMarker { get; set; }
 
     public SizedInventory Inventory { get; private set; } = new(100);
+    public PlayerEquipments Equipments { get; private set; } = new();
+    
     private readonly List<InteractTipPanel> _interactTipPanels = new();
     
     private HFSM ActionStateMachine { get; set; }
@@ -49,7 +54,24 @@ public partial class Player : CharacterEntity
         ActionStateMachine = HFSMUtils.TryConvert<HFSM>(GetNode<Node>("HFSM2"));
         if (ActionStateMachine == null)
             throw new System.Exception("Initialize Player state machine failed.");
-        
+
+        Equipments.Weapon.StoredItemChanged += item =>
+        {
+            if (item == null)
+            {
+                if (IsInstanceValid(WeaponMarker.GetChild(0))) return;
+                if (WeaponMarker.GetChild(0) is not Weapon weapon) return;
+                weapon.QueueFree();
+                return;
+            }
+
+            var weaponEntity = WeaponFactory.Create(item);
+            if (weaponEntity == null) return;
+            
+            WeaponMarker.AddChild(weaponEntity);
+            weaponEntity.Config(true);
+        };
+
         EventBus.PlayerReady.Invoke();
     }
     
@@ -78,7 +100,11 @@ public partial class Player : CharacterEntity
         }
         
         // because sprite is faced left... so x < mouse
-        AnimatedSprite2D.FlipH = GlobalPosition.X < GetGlobalMousePosition().X;
+        // AnimatedSprite2D.FlipH = GlobalPosition.X < GetGlobalMousePosition().X;
+        Graphics.Scale = new Vector2(
+            GlobalPosition.X < GetGlobalMousePosition().X ? 1 : -1,
+            1
+            );
         MoveAndSlide();
     }
 
@@ -106,11 +132,18 @@ public partial class Player : CharacterEntity
     public override void _UnhandledInput(InputEvent @event)
     {
         base._UnhandledInput(@event);
+        if (!Equipments.Weapon.HasItem)
+        {
+            return;
+        }
 
         var state = ActionStateMachine.GetCurrentState();
         if (state == null) return;
 
-        if (state.GetName() != "Idle") return;
+        if (state.GetName() != "Idle")
+        {
+            return;
+        }
 
         if (@event.IsActionPressed("Attack"))
         {

@@ -14,6 +14,8 @@ namespace cfg.Items
     public enum ItemType
     {
         Sword = 0,
+        Head = 1,
+        Armor = 2,
     }
 
 } 

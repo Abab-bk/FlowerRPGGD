@@ -15,22 +15,26 @@ public partial class HurtBox : Area2D
         {
             CallDeferred(
                 CollisionObject2D.MethodName.SetCollisionLayerValue,
-                (int)CollisionLayerName.PlayerHurtBox
+                (int)CollisionLayerName.PlayerHurtBox,
+                true
             );
             CallDeferred(
                 CollisionObject2D.MethodName.SetCollisionMaskValue,
-                (int)CollisionLayerName.MobHitBox
+                (int)CollisionLayerName.MobHitBox,
+                true
             );
         }
         else
         {
             CallDeferred(
                 CollisionObject2D.MethodName.SetCollisionLayerValue,
-                (int)CollisionLayerName.MobHurtBox
+                (int)CollisionLayerName.MobHurtBox,
+                true
             );
             CallDeferred(
                 CollisionObject2D.MethodName.SetCollisionMaskValue,
-                (int)CollisionLayerName.PlayerHitBox
+                (int)CollisionLayerName.PlayerHitBox,
+                true
             );
         }
     }

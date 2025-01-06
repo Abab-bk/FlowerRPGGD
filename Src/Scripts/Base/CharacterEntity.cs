@@ -9,6 +9,7 @@ namespace Game.Scripts.Base;
 
 public partial class CharacterEntity : CharacterBody2D, IGameEntity
 {
+    [Export] protected Node2D Graphics { get; set; }
     [Export] protected AnimatedSprite2D AnimatedSprite2D { get; set; }
     [Export] protected CollisionShape2D CollisionShape2D { get; set; }
     public CharacterInfo CharacterInfo { get; protected set; }
