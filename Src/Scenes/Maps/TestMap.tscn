@@ -505,10 +505,3 @@ tile_set = SubResource("TileSet_27ilp")
 [node name="PlayerPos" type="Node2D" parent="Signs" index="0"]
 position = Vector2(32, 976)
 script = ExtResource("3_6aq71")
-
-[node name="Npc" type="Node2D" parent="Signs" index="1"]
-position = Vector2(128, 976)
-script = ExtResource("3_6aq71")
-SignType = 1
-Content = "c_guide"
-InteractionType = 1

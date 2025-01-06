@@ -1,0 +1,12 @@
+[
+  {
+    "id": "m_slime_green",
+    "name": "SlimeGreen",
+    "level": 1,
+    "scene_name": "SlimeGreen",
+    "stats": {
+      "max_health": 100,
+      "speed": 50
+    }
+  }
+]

@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using DataBase;
 using Game.Scripts.Items;
+using Game.Scripts.Mobs;
 using Godot;
 using ImGuiGodot;
 using ImGuiNET;
@@ -15,6 +16,7 @@ public partial class Debugger : Node
 #if IMGUI
     private LootTable _allItemsLootTable;
     private string _addItemId = "i_sword1";
+    private string _mobId = "m_slime_green";
     
     public override void _Ready()
     {
@@ -55,7 +57,15 @@ public partial class Debugger : Node
                 new UniqueItem(Data.Tables.TbItems.Get(_addItemId))
                 );
         }
-
+        
+        ImGui.InputText("Mob Id", ref _mobId, 20);
+        
+        if (ImGui.Button("Spawn Mob"))
+        {
+            var mob = Mob.Create(Data.Tables.TbMobs.Get(_mobId));
+            Global.World.AddChild(mob);
+        }
+        
         ImGui.End();
     }
 #endif

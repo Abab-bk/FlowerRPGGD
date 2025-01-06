@@ -1,4 +1,4 @@
-﻿using cfg.Characters;
+﻿using cfg;
 using Game.Scripts.Maps;
 
 namespace Game.Scripts.Npcs;

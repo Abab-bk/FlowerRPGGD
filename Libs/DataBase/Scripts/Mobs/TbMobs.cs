@@ -11,14 +11,14 @@ using Luban;
 using System.Text.Json;
 
 
-namespace cfg.Characters
+namespace cfg.Mobs
 {
-public partial class TbCharacters
+public partial class TbMobs
 {
     private readonly System.Collections.Generic.Dictionary<string, CharacterInfo> _dataMap;
     private readonly System.Collections.Generic.List<CharacterInfo> _dataList;
     
-    public TbCharacters(JsonElement _buf)
+    public TbMobs(JsonElement _buf)
     {
         _dataMap = new System.Collections.Generic.Dictionary<string, CharacterInfo>();
         _dataList = new System.Collections.Generic.List<CharacterInfo>();

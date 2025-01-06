@@ -18,6 +18,7 @@ public partial class Tables
     public Characters.TbCharacters TbCharacters {get; }
     public Maps.TbMaps TbMaps {get; }
     public Items.TbItems TbItems {get; }
+    public Mobs.TbMobs TbMobs {get; }
 
     public Tables(System.Func<string, JsonElement> loader)
     {
@@ -25,6 +26,7 @@ public partial class Tables
         TbCharacters = new Characters.TbCharacters(loader("characters_tbcharacters"));
         TbMaps = new Maps.TbMaps(loader("maps_tbmaps"));
         TbItems = new Items.TbItems(loader("items_tbitems"));
+        TbMobs = new Mobs.TbMobs(loader("mobs_tbmobs"));
         ResolveRef();
     }
     
@@ -34,6 +36,7 @@ public partial class Tables
         TbCharacters.ResolveRef(this);
         TbMaps.ResolveRef(this);
         TbItems.ResolveRef(this);
+        TbMobs.ResolveRef(this);
     }
 }
 

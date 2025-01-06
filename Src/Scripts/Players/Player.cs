@@ -1,15 +1,17 @@
 using System.Collections.Generic;
 using System.Linq;
 using AcidUtilities;
+using cfg;
 using Godot;
-using cfg.Characters;
 using Game.Scripts.Base;
 using Game.Scripts.Interactions;
 using Game.Scripts.Items;
 using Game.Scripts.Ui.InteractTip;
 using Game.Scripts.Weapons;
+using RPGCore.Combat;
 using RPGCore.Inventories;
 using RPGCore.Players;
+using Vector2 = Godot.Vector2;
 
 namespace Game.Scripts.Players;
 
@@ -69,12 +71,21 @@ public partial class Player : CharacterEntity
             if (weaponEntity == null) return;
             
             WeaponMarker.AddChild(weaponEntity);
-            weaponEntity.Config(true);
+            weaponEntity.Config(true, CalculateAttack);
         };
 
         EventBus.PlayerReady.Invoke();
     }
-    
+
+    private Attack CalculateAttack()
+    {
+        var attack = new Attack([
+                new Damage(DamageType.Physical, 10f)
+            ]
+            );
+        return attack;
+    }
+
     protected override void OnPhysicUpdated(State state, float delta)
     {
         base.OnPhysicUpdated(state, delta);
@@ -118,15 +129,6 @@ public partial class Player : CharacterEntity
 
     protected override void OnTransited(State from, State to)
     {
-        switch (to.GetName())
-        {
-            case "Idle":
-                AnimatedSprite2D.Play("Idle");
-                break;
-            case "Running":
-                AnimatedSprite2D.Play("Running");
-                break;
-        }
     }
 
     public override void _UnhandledInput(InputEvent @event)

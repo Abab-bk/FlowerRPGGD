@@ -1,13 +1,24 @@
-﻿using Game.Scripts.Enums;
+﻿using System;
+using Game.Scripts.Enums;
 using Godot;
+using RPGCore.Combat;
 
 namespace Game.Scripts.Prefabs;
 
 [GlobalClass]
 public partial class HitBox : Area2D
 {
-    public void Config(bool isPlayer)
+    private Func<Attack> _getAttack;
+    
+    public Attack GetAttack()
     {
+        return _getAttack();
+    }
+
+    public void Config(bool isPlayer, Func<Attack> getAttack)
+    {
+        _getAttack = getAttack;
+        
         CollisionLayer = 0;
         CollisionMask = 0;
         

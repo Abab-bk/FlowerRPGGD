@@ -1,0 +1,63 @@
+[gd_scene load_steps=8 format=3 uid="uid://dmkm74817wh7n"]
+
+[ext_resource type="PackedScene" uid="uid://cxf6a06c26omo" path="res://Scenes/Base/CharacterEntity.tscn" id="1_5ytdv"]
+[ext_resource type="Script" path="res://Scripts/Mobs/Mob.cs" id="2_0ai5o"]
+[ext_resource type="Script" path="res://Scripts/Mobs/MobAi.cs" id="3_57s4t"]
+[ext_resource type="Script" path="res://Scripts/Prefabs/HurtBox.cs" id="4_nhqtt"]
+
+[sub_resource type="Animation" id="Animation_ly25u"]
+resource_name = "OnHurt"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Graphics:modulate")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 0.160784, 0.203922, 1), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_c7521"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Graphics:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8rkct"]
+_data = {
+"OnHurt": SubResource("Animation_ly25u"),
+"RESET": SubResource("Animation_c7521")
+}
+
+[node name="Mob" node_paths=PackedStringArray("HurtBox", "Animation2") instance=ExtResource("1_5ytdv")]
+script = ExtResource("2_0ai5o")
+HurtBox = NodePath("HurtBox")
+Animation2 = NodePath("Aniamtion2")
+
+[node name="MobAi" type="Node" parent="." index="3"]
+script = ExtResource("3_57s4t")
+
+[node name="HurtBox" type="Area2D" parent="." index="4"]
+collision_layer = 256
+collision_mask = 32
+script = ExtResource("4_nhqtt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox" index="0"]
+
+[node name="Aniamtion2" type="AnimationPlayer" parent="." index="5"]
+libraries = {
+"": SubResource("AnimationLibrary_8rkct")
+}

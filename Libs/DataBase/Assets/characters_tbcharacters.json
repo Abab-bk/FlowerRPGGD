@@ -3,17 +3,7 @@
     "id": "c_player",
     "name": "Player",
     "level": 1,
-    "sprite": "Base",
-    "stats": {
-      "max_health": 100,
-      "speed": 300
-    }
-  },
-  {
-    "id": "c_guide",
-    "name": "Guide",
-    "level": 1,
-    "sprite": "Base",
+    "scene_name": "Player",
     "stats": {
       "max_health": 100,
       "speed": 300

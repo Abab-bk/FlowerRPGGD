@@ -1,6 +1,5 @@
-﻿using cfg.Characters;
+﻿using cfg;
 using DataBase;
-using Game.AnimationProcessors;
 using Game.Scripts.Interfaces;
 using Godot;
 using RPGCore.Stats;
@@ -10,7 +9,7 @@ namespace Game.Scripts.Base;
 public partial class CharacterEntity : CharacterBody2D, IGameEntity
 {
     [Export] protected Node2D Graphics { get; set; }
-    [Export] protected AnimatedSprite2D AnimatedSprite2D { get; set; }
+    [Export] protected AnimationPlayer Animation { get; set; }
     [Export] protected CollisionShape2D CollisionShape2D { get; set; }
     public CharacterInfo CharacterInfo { get; protected set; }
     public CharacterStats Stats { get; protected set; }
@@ -41,11 +40,12 @@ public partial class CharacterEntity : CharacterBody2D, IGameEntity
 
     protected virtual void InitSprite()
     {
-        var processor = new DefaultAnimationProcessor();
-        AnimatedSprite2D.SpriteFrames = processor.Process(
-            IsMultiplayer ? Sprite : $"res://Assets/Characters/{CharacterInfo.Sprite}.png"
-        );
-        AnimatedSprite2D.Animation = "Idle";
+        // TODO: Fix
+        // var processor = new DefaultAnimationProcessor();
+        // AnimatedSprite2D.SpriteFrames = processor.Process(
+        //     IsMultiplayer ? Sprite : $"res://Assets/Characters/{CharacterInfo.Sprite}.png"
+        // );
+        // AnimatedSprite2D.Animation = "Idle";
     }
 
     protected virtual void OnPhysicUpdated(State state, float delta)

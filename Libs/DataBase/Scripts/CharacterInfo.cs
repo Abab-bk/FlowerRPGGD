@@ -11,7 +11,7 @@ using Luban;
 using System.Text.Json;
 
 
-namespace cfg.Characters
+namespace cfg
 {
 public sealed partial class CharacterInfo : Luban.BeanBase
 {
@@ -20,22 +20,22 @@ public sealed partial class CharacterInfo : Luban.BeanBase
         Id = _buf.GetProperty("id").GetString();
         Name = _buf.GetProperty("name").GetString();
         Level = _buf.GetProperty("level").GetInt32();
-        Sprite = _buf.GetProperty("sprite").GetString();
+        SceneName = _buf.GetProperty("scene_name").GetString();
         Stats = StatsInfo.DeserializeStatsInfo(_buf.GetProperty("stats"));
     }
 
     public static CharacterInfo DeserializeCharacterInfo(JsonElement _buf)
     {
-        return new Characters.CharacterInfo(_buf);
+        return new CharacterInfo(_buf);
     }
 
     public readonly string Id;
     public readonly string Name;
     public readonly int Level;
-    public readonly string Sprite;
+    public readonly string SceneName;
     public readonly StatsInfo Stats;
    
-    public const int __ID__ = 183930611;
+    public const int __ID__ = -991295657;
     public override int GetTypeId() => __ID__;
 
     public  void ResolveRef(Tables tables)
@@ -49,7 +49,7 @@ public sealed partial class CharacterInfo : Luban.BeanBase
         + "id:" + Id + ","
         + "name:" + Name + ","
         + "level:" + Level + ","
-        + "sprite:" + Sprite + ","
+        + "sceneName:" + SceneName + ","
         + "stats:" + Stats + ","
         + "}";
     }

@@ -6,10 +6,12 @@
 state_name = &"Idle"
 type = 1
 editor_offset = Vector2(200, 100)
+animation_name = &"Idle"
 
 [sub_resource type="StateConfig" id="StateConfig_yk6gi"]
 state_name = &"Running"
 editor_offset = Vector2(560, 100)
+animation_name = &"Running"
 
 [sub_resource type="VariableConfig" id="VariableConfig_ea1g3"]
 variable_name = &"ToRunning"
@@ -46,18 +48,21 @@ state_config_list = Array[StateConfig]([SubResource("StateConfig_ts4ni"), SubRes
 transition_config_list = Array[TransitionConfig]([SubResource("TransitionConfig_5mfad"), SubResource("TransitionConfig_fvb5v")])
 variable_config_list = Array[VariableConfig]([SubResource("VariableConfig_8rm1o"), SubResource("VariableConfig_ea1g3")])
 
-[node name="CharacterEntity" type="CharacterBody2D" node_paths=PackedStringArray("Graphics", "AnimatedSprite2D", "CollisionShape2D")]
+[node name="CharacterEntity" type="CharacterBody2D" node_paths=PackedStringArray("Graphics", "Animation", "CollisionShape2D")]
 texture_filter = 1
 script = ExtResource("1_yqh5k")
 Graphics = NodePath("Graphics")
-AnimatedSprite2D = NodePath("Graphics/AnimatedSprite2D")
+Animation = NodePath("Graphics/Animation")
 CollisionShape2D = NodePath("CollisionShape2D")
 
 [node name="Graphics" type="Node2D" parent="."]
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Graphics"]
+[node name="Animation" type="AnimationPlayer" parent="Graphics"]
+
+[node name="Sprite2D" type="Sprite2D" parent="Graphics"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 
-[node name="HFSM" type="HFSM" parent="."]
+[node name="HFSM" type="HFSM" parent="." node_paths=PackedStringArray("animation_player")]
+animation_player = NodePath("../Graphics/Animation")
 root_fsm_config = SubResource("FSMConfig_lth4b")
