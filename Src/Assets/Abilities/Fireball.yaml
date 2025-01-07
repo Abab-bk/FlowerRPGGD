@@ -1,0 +1,11 @@
+﻿name: Fireball
+icon_name: Fireball
+ability_class: DataDriven
+behaviors: [Point]
+modifiers: []
+on_active:
+  - ability_action_type: FireProjectile
+    projectile_name: Fireball
+    move_speed: 300
+    rotation: 0
+    damage: 10

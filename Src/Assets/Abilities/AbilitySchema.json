@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "Assets/Abilities/AbilitySchema.json",
+  "title": "AbilitySchema",
+  "description": "A data-driven ability",
+  "type": "object",
+  
+  "properties": {
+    "ability_class": {
+      "type": "string",
+      "enum": ["DataDriven", "Script"]
+    },
+    
+    "behaviors": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": ["Point"]
+      }
+    },
+    
+    "icon_name": {
+      "type": "string"
+    },
+    
+    "modifiers": {
+      "type": "array"
+    },
+    
+    "on_active": {
+      "type": "array"
+    },
+    
+    "required": ["ability_class", "behaviors", "icon_name", "modifiers"]
+  }
+}

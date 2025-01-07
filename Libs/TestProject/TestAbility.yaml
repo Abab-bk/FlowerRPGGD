@@ -1,0 +1,9 @@
+﻿ability_class: DataDriven
+icon_name: ''
+behaviors:
+  - Passive
+  - Point
+modifiers:
+  - name: ''
+    on_active:
+      - {}
