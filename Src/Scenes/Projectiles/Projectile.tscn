@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://bvs8dqqfkot1s"]
+
+[ext_resource type="Script" path="res://Scripts/Projectiles/Projectile.cs" id="1_kbuae"]
+[ext_resource type="Script" path="res://Scripts/Prefabs/HitBox.cs" id="2_8py3w"]
+
+[node name="Projectile" type="Node2D" node_paths=PackedStringArray("HitBox", "Graphics")]
+script = ExtResource("1_kbuae")
+HitBox = NodePath("HitBox")
+Graphics = NodePath("Graphics")
+
+[node name="Graphics" type="Node2D" parent="."]
+
+[node name="HitBox" type="Area2D" parent="."]
+script = ExtResource("2_8py3w")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]

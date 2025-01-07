@@ -32,6 +32,7 @@ public partial class HudPanel : Hud
                 Global.PlayerInventory,
                 Global.Player.Equipments
                 );
+            S_AbilityLoadoutUi.Instance.Init(Global.Player.AbilityLoadout);
         };
     }
 

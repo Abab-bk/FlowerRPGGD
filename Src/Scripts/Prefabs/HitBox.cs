@@ -8,8 +8,19 @@ namespace Game.Scripts.Prefabs;
 [GlobalClass]
 public partial class HitBox : Area2D
 {
-    private Func<Attack> _getAttack;
+    public event Action OnHit = delegate { };
     
+    private Func<Attack> _getAttack;
+
+    public override void _Ready()
+    {
+        AreaEntered += area =>
+        {
+            if (area is not HurtBox hurtBox) return;
+            OnHit();
+        };
+    }
+
     public Attack GetAttack()
     {
         return _getAttack();

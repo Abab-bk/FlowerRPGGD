@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.IO;
 using DataBase;
 using Game.Scripts.Items;
 using Game.Scripts.Mobs;
@@ -6,8 +8,11 @@ using Godot;
 using ImGuiGodot;
 using ImGuiNET;
 using KaimiraGames;
+using RPGCore.Abilities;
 using RPGCore.Items;
 using RPGCore.Loots;
+using YamlDotNet.Serialization;
+using YamlDotNet.Serialization.NamingConventions;
 
 namespace Game.Scripts;
 
@@ -17,6 +22,7 @@ public partial class Debugger : Node
     private LootTable _allItemsLootTable;
     private string _addItemId = "i_sword1";
     private string _mobId = "m_slime_green";
+    private string _abilityName = "Fireball";
     
     public override void _Ready()
     {
@@ -66,6 +72,25 @@ public partial class Debugger : Node
             Global.World.AddChild(mob);
         }
         
+        ImGui.InputText("Ability Name", ref _abilityName, 20);
+
+        if (ImGui.Button("Get Ability"))
+        {
+            var deserializer = new DeserializerBuilder()
+                .WithNamingConvention(UnderscoredNamingConvention.Instance)
+                .Build();
+            Global.Player.AbilityLoadout.SetPrimary(
+                deserializer.Deserialize<DataDrivenAbility>(
+                    File.ReadAllText(
+                        Path.Combine(
+                            AppDomain.CurrentDomain.BaseDirectory,
+                            $"Assets/Abilities/{_abilityName}.yaml"
+                            )
+                        )
+                    )
+                );
+        }
+
         ImGui.End();
     }
 #endif

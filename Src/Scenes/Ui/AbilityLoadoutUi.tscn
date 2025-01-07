@@ -1,0 +1,36 @@
+[gd_scene load_steps=3 format=3 uid="uid://c2t7xo2u2aco1"]
+
+[ext_resource type="Script" path="res://Scripts/Ui/abilityLoadoutUi/AbilityLoadoutUiPanel.cs" id="1_1vymn"]
+[ext_resource type="PackedScene" uid="uid://btl66yu6s80du" path="res://Scenes/Ui/AbilityButton.tscn" id="2_tqhsl"]
+
+[node name="AbilityLoadoutUi" type="Control"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 3
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+script = ExtResource("1_1vymn")
+
+[node name="Abilities" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="PrimaryBtn" parent="Abilities" instance=ExtResource("2_tqhsl")]
+unique_name_in_owner = true
+layout_mode = 2
+Key = "PrimaryAbility"
+DisplayName = "1"
+
+[node name="SecondaryBtn" parent="Abilities" instance=ExtResource("2_tqhsl")]
+unique_name_in_owner = true
+layout_mode = 2
+Key = "SecondaryAbility"
+DisplayName = "2"

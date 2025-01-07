@@ -20,6 +20,19 @@ public abstract partial class Hud : UiBase
     }
     private Pages _L_Pages;
 
+    /// <summary>
+    /// 使用 Instance 属性获取当前节点实例对象, 节点类型: <see cref="Game.Scripts.Ui.AbilityLoadoutUi.AbilityLoadoutUiPanel"/>, 节点路径: Hud.AbilityLoadoutUi
+    /// </summary>
+    public AbilityLoadoutUi L_AbilityLoadoutUi
+    {
+        get
+        {
+            if (_L_AbilityLoadoutUi == null) _L_AbilityLoadoutUi = new AbilityLoadoutUi((HudPanel)this, GetNode<Game.Scripts.Ui.AbilityLoadoutUi.AbilityLoadoutUiPanel>("AbilityLoadoutUi"));
+            return _L_AbilityLoadoutUi;
+        }
+    }
+    private AbilityLoadoutUi _L_AbilityLoadoutUi;
+
 
     public Hud() : base(nameof(Hud))
     {
@@ -32,6 +45,11 @@ public abstract partial class Hud : UiBase
         RecordNestedUi(inst1.L_CharacterUi.Instance, inst1, UiManager.RecordType.Open);
         inst1.L_CharacterUi.Instance.OnCreateUi();
         inst1.L_CharacterUi.Instance.OnInitNestedUi();
+
+        var inst2 = this;
+        RecordNestedUi(inst2.L_AbilityLoadoutUi.Instance, null, UiManager.RecordType.Open);
+        inst2.L_AbilityLoadoutUi.Instance.OnCreateUi();
+        inst2.L_AbilityLoadoutUi.Instance.OnInitNestedUi();
 
     }
 
@@ -95,6 +113,22 @@ public abstract partial class Hud : UiBase
         public override Pages Clone() => new (UiPanel, (Godot.TabContainer)Instance.Duplicate());
     }
 
+    /// <summary>
+    /// 类型: <see cref="Game.Scripts.Ui.AbilityLoadoutUi.AbilityLoadoutUiPanel"/>, 路径: Hud.AbilityLoadoutUi
+    /// </summary>
+    public class AbilityLoadoutUi : UiNode<HudPanel, Game.Scripts.Ui.AbilityLoadoutUi.AbilityLoadoutUiPanel, AbilityLoadoutUi>
+    {
+        public AbilityLoadoutUi(HudPanel uiPanel, Game.Scripts.Ui.AbilityLoadoutUi.AbilityLoadoutUiPanel node) : base(uiPanel, node) {  }
+        public override AbilityLoadoutUi Clone()
+        {
+            var uiNode = new AbilityLoadoutUi(UiPanel, (Game.Scripts.Ui.AbilityLoadoutUi.AbilityLoadoutUiPanel)Instance.Duplicate());
+            UiPanel.RecordNestedUi(uiNode.Instance, this, UiManager.RecordType.Open);
+            uiNode.Instance.OnCreateUi();
+            uiNode.Instance.OnInitNestedUi();
+            return uiNode;
+        }
+    }
+
 
     /// <summary>
     /// 场景中唯一名称的节点, 节点类型: <see cref="Godot.Control"/>, 节点路径: Hud.Pages.Home
@@ -110,5 +144,10 @@ public abstract partial class Hud : UiBase
     /// 场景中唯一名称的节点, 节点类型: <see cref="Godot.TabContainer"/>, 节点路径: Hud.Pages
     /// </summary>
     public Pages S_Pages => L_Pages;
+
+    /// <summary>
+    /// 场景中唯一名称的节点, 节点类型: <see cref="Game.Scripts.Ui.AbilityLoadoutUi.AbilityLoadoutUiPanel"/>, 节点路径: Hud.AbilityLoadoutUi
+    /// </summary>
+    public AbilityLoadoutUi S_AbilityLoadoutUi => L_AbilityLoadoutUi;
 
 }

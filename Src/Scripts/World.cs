@@ -2,6 +2,7 @@
 using DsUi;
 using Game.Scripts.Maps;
 using Godot;
+using RPGCore.Abilities;
 
 namespace Game.Scripts;
 
@@ -21,6 +22,8 @@ public partial class World : Node2D
             ($"res://Scenes/Maps/{level.SceneName}.tscn").Instantiate<Map>();
         AddChild(mapNode);
         mapNode.Init();
+        
+        AbilityProcessor.Init(new GAbilityProcessor());
         
         Logger.Log("[World] Ready");
     }

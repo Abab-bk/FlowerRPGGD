@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://cycxviudrieqw"]
+
+[ext_resource type="PackedScene" uid="uid://bvs8dqqfkot1s" path="res://Scenes/Projectiles/Projectile.tscn" id="1_fpcog"]
+[ext_resource type="Texture2D" uid="uid://bel14f0ljcedi" path="res://icon.svg" id="2_1vfp3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_grxbt"]
+size = Vector2(122, 122)
+
+[node name="Fireball" instance=ExtResource("1_fpcog")]
+
+[node name="Icon" type="Sprite2D" parent="Graphics" index="0"]
+modulate = Color(1, 0.403922, 0, 1)
+texture = ExtResource("2_1vfp3")
+
+[node name="CollisionShape2D" parent="HitBox" index="0"]
+shape = SubResource("RectangleShape2D_grxbt")

@@ -1,0 +1,47 @@
+[gd_scene load_steps=4 format=3 uid="uid://btl66yu6s80du"]
+
+[ext_resource type="Theme" uid="uid://dcu258d8wjk74" path="res://Assets/Themes/Default.tres" id="1_86ewb"]
+[ext_resource type="Script" path="res://Scripts/Ui/abilityButton/AbilityButtonPanel.cs" id="1_h5oor"]
+[ext_resource type="Texture2D" uid="uid://ccqitbx4h2lqh" path="res://Assets/Textures/Block.png" id="4_kxd4e"]
+
+[node name="AbilityButton" type="Control"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 3
+anchors_preset = 0
+theme = ExtResource("1_86ewb")
+theme_type_variation = &"EmptyBtn"
+script = ExtResource("1_h5oor")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Icon" type="TextureRect" parent="PanelContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="KeyLabel" type="Label" parent="PanelContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 1
+text = "E"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="CooldownProgress" type="TextureProgressBar" parent="."]
+unique_name_in_owner = true
+modulate = Color(0, 0, 0, 0.831373)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+fill_mode = 5
+texture_progress = ExtResource("4_kxd4e")

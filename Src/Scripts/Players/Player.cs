@@ -22,6 +22,7 @@ public partial class Player : CharacterEntity
 
     public SizedInventory Inventory { get; private set; } = new(100);
     public PlayerEquipments Equipments { get; private set; } = new();
+    public AbilityLoadout AbilityLoadout { get; private set; } = new();
     
     private readonly List<InteractTipPanel> _interactTipPanels = new();
     
@@ -74,6 +75,10 @@ public partial class Player : CharacterEntity
             weaponEntity.Config(true, CalculateAttack);
         };
 
+        var timers = new Node();
+        AddChild(timers);
+        AbilityLoadout.Init(timers);
+        
         EventBus.PlayerReady.Invoke();
     }
 

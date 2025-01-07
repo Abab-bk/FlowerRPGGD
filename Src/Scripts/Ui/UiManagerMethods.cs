@@ -6,6 +6,8 @@ public static partial class UiManager
 
     public static class UiName
     {
+        public const string AbilityButton = "AbilityButton";
+        public const string AbilityLoadoutUi = "AbilityLoadoutUi";
         public const string BootSplash = "BootSplash";
         public const string CharacterEquipmentsUi = "CharacterEquipmentsUi";
         public const string CharacterUi = "CharacterUi";
@@ -20,6 +22,102 @@ public static partial class UiManager
         public const string PauseMenu = "PauseMenu";
         public const string Settings = "Settings";
         public const string StartMenu = "StartMenu";
+    }
+
+    /// <summary>
+    /// 创建 AbilityButton, 并返回UI实例, 该函数不会打开 Ui
+    /// </summary>
+    public static Game.Scripts.Ui.AbilityButton.AbilityButtonPanel Create_AbilityButton()
+    {
+        return CreateUi<Game.Scripts.Ui.AbilityButton.AbilityButtonPanel>(UiName.AbilityButton);
+    }
+
+    /// <summary>
+    /// 打开 AbilityButton, 并返回UI实例
+    /// </summary>
+    public static Game.Scripts.Ui.AbilityButton.AbilityButtonPanel Open_AbilityButton()
+    {
+        return OpenUi<Game.Scripts.Ui.AbilityButton.AbilityButtonPanel>(UiName.AbilityButton);
+    }
+
+    /// <summary>
+    /// 隐藏 AbilityButton 的所有实例
+    /// </summary>
+    public static void Hide_AbilityButton()
+    {
+        var uiInstance = Get_AbilityButton_Instance();
+        foreach (var uiPanel in uiInstance)
+        {
+            uiPanel.HideUi();
+        }
+    }
+
+    /// <summary>
+    /// 销毁 AbilityButton 的所有实例
+    /// </summary>
+    public static void Destroy_AbilityButton()
+    {
+        var uiInstance = Get_AbilityButton_Instance();
+        foreach (var uiPanel in uiInstance)
+        {
+            uiPanel.Destroy();
+        }
+    }
+
+    /// <summary>
+    /// 获取所有 AbilityButton 的实例, 如果没有实例, 则返回一个空数组
+    /// </summary>
+    public static Game.Scripts.Ui.AbilityButton.AbilityButtonPanel[] Get_AbilityButton_Instance()
+    {
+        return GetUiInstance<Game.Scripts.Ui.AbilityButton.AbilityButtonPanel>(nameof(Game.Scripts.Ui.AbilityButton.AbilityButton));
+    }
+
+    /// <summary>
+    /// 创建 AbilityLoadoutUi, 并返回UI实例, 该函数不会打开 Ui
+    /// </summary>
+    public static Game.Scripts.Ui.AbilityLoadoutUi.AbilityLoadoutUiPanel Create_AbilityLoadoutUi()
+    {
+        return CreateUi<Game.Scripts.Ui.AbilityLoadoutUi.AbilityLoadoutUiPanel>(UiName.AbilityLoadoutUi);
+    }
+
+    /// <summary>
+    /// 打开 AbilityLoadoutUi, 并返回UI实例
+    /// </summary>
+    public static Game.Scripts.Ui.AbilityLoadoutUi.AbilityLoadoutUiPanel Open_AbilityLoadoutUi()
+    {
+        return OpenUi<Game.Scripts.Ui.AbilityLoadoutUi.AbilityLoadoutUiPanel>(UiName.AbilityLoadoutUi);
+    }
+
+    /// <summary>
+    /// 隐藏 AbilityLoadoutUi 的所有实例
+    /// </summary>
+    public static void Hide_AbilityLoadoutUi()
+    {
+        var uiInstance = Get_AbilityLoadoutUi_Instance();
+        foreach (var uiPanel in uiInstance)
+        {
+            uiPanel.HideUi();
+        }
+    }
+
+    /// <summary>
+    /// 销毁 AbilityLoadoutUi 的所有实例
+    /// </summary>
+    public static void Destroy_AbilityLoadoutUi()
+    {
+        var uiInstance = Get_AbilityLoadoutUi_Instance();
+        foreach (var uiPanel in uiInstance)
+        {
+            uiPanel.Destroy();
+        }
+    }
+
+    /// <summary>
+    /// 获取所有 AbilityLoadoutUi 的实例, 如果没有实例, 则返回一个空数组
+    /// </summary>
+    public static Game.Scripts.Ui.AbilityLoadoutUi.AbilityLoadoutUiPanel[] Get_AbilityLoadoutUi_Instance()
+    {
+        return GetUiInstance<Game.Scripts.Ui.AbilityLoadoutUi.AbilityLoadoutUiPanel>(nameof(Game.Scripts.Ui.AbilityLoadoutUi.AbilityLoadoutUi));
     }
 
     /// <summary>
