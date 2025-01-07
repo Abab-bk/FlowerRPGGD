@@ -21,6 +21,7 @@ public sealed partial class ItemTemplate : Luban.BeanBase
         Name = _buf.GetProperty("name").GetString();
         ItemType = (Items.ItemType)_buf.GetProperty("item_type").GetInt32();
         Value = _buf.GetProperty("value").GetSingle();
+        IconName = _buf.GetProperty("icon_name").GetString();
         Rarity = (Items.Rarity)_buf.GetProperty("rarity").GetInt32();
     }
 
@@ -46,6 +47,10 @@ public sealed partial class ItemTemplate : Luban.BeanBase
     /// </summary>
     public readonly float Value;
     /// <summary>
+    /// icon_name
+    /// </summary>
+    public readonly string IconName;
+    /// <summary>
     /// 稀有度
     /// </summary>
     public readonly Items.Rarity Rarity;
@@ -64,6 +69,7 @@ public sealed partial class ItemTemplate : Luban.BeanBase
         + "name:" + Name + ","
         + "itemType:" + ItemType + ","
         + "value:" + Value + ","
+        + "iconName:" + IconName + ","
         + "rarity:" + Rarity + ","
         + "}";
     }

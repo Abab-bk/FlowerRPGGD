@@ -4,6 +4,7 @@
     "name": "Sword1",
     "item_type": 0,
     "value": 100,
+    "icon_name": "SwordIcon",
     "rarity": 0
   },
   {
@@ -11,6 +12,7 @@
     "name": "Sword2",
     "item_type": 0,
     "value": 100,
+    "icon_name": "SwordIcon",
     "rarity": 0
   },
   {
@@ -18,6 +20,7 @@
     "name": "Sword3",
     "item_type": 0,
     "value": 100,
+    "icon_name": "SwordIcon",
     "rarity": 0
   },
   {
@@ -25,6 +28,7 @@
     "name": "Sword4",
     "item_type": 0,
     "value": 100,
+    "icon_name": "SwordIcon",
     "rarity": 0
   },
   {
@@ -32,6 +36,7 @@
     "name": "Sword5",
     "item_type": 0,
     "value": 100,
+    "icon_name": "SwordIcon",
     "rarity": 0
   },
   {
@@ -39,6 +44,7 @@
     "name": "Sword6",
     "item_type": 0,
     "value": 100,
+    "icon_name": "SwordIcon",
     "rarity": 0
   },
   {
@@ -46,6 +52,7 @@
     "name": "Sword7",
     "item_type": 0,
     "value": 100,
+    "icon_name": "SwordIcon",
     "rarity": 0
   },
   {
@@ -53,6 +60,7 @@
     "name": "Sword8",
     "item_type": 0,
     "value": 100,
+    "icon_name": "SwordIcon",
     "rarity": 0
   },
   {
@@ -60,6 +68,7 @@
     "name": "Sword9",
     "item_type": 0,
     "value": 100,
+    "icon_name": "SwordIcon",
     "rarity": 0
   },
   {
@@ -67,6 +76,7 @@
     "name": "Sword10",
     "item_type": 0,
     "value": 100,
+    "icon_name": "SwordIcon",
     "rarity": 0
   },
   {
@@ -74,6 +84,7 @@
     "name": "Sword11",
     "item_type": 0,
     "value": 100,
+    "icon_name": "SwordIcon",
     "rarity": 0
   },
   {
@@ -81,6 +92,7 @@
     "name": "Sword12",
     "item_type": 0,
     "value": 100,
+    "icon_name": "SwordIcon",
     "rarity": 0
   },
   {
@@ -88,6 +100,7 @@
     "name": "Sword13",
     "item_type": 0,
     "value": 100,
+    "icon_name": "SwordIcon",
     "rarity": 0
   },
   {
@@ -95,6 +108,7 @@
     "name": "Sword14",
     "item_type": 0,
     "value": 100,
+    "icon_name": "SwordIcon",
     "rarity": 0
   },
   {
@@ -102,6 +116,7 @@
     "name": "Sword15",
     "item_type": 0,
     "value": 100,
+    "icon_name": "SwordIcon",
     "rarity": 0
   },
   {
@@ -109,6 +124,7 @@
     "name": "Sword16",
     "item_type": 0,
     "value": 100,
+    "icon_name": "SwordIcon",
     "rarity": 0
   }
 ]

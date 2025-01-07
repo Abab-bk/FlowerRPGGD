@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://drhqcdj00qb4t"]
+[gd_scene load_steps=4 format=3 uid="uid://drhqcdj00qb4t"]
 
 [ext_resource type="Script" path="res://Scripts/Ui/characterUi/CharacterUiPanel.cs" id="1_nbjyg"]
 [ext_resource type="PackedScene" uid="uid://c4roe2xiklwgt" path="res://Scenes/Ui/InventoryUi.tscn" id="2_ghn27"]
+[ext_resource type="PackedScene" uid="uid://k8bibr2d1xtj" path="res://Scenes/Ui/CharacterEquipmentsUi.tscn" id="3_hxic2"]
 
 [node name="CharacterUi" type="Control"]
 layout_mode = 3
@@ -12,6 +13,20 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_nbjyg")
 
-[node name="InventoryUi" parent="." instance=ExtResource("2_ghn27")]
-unique_name_in_owner = true
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CharacterEquipmentsUi" parent="HBoxContainer" instance=ExtResource("3_hxic2")]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 2
+
+[node name="InventoryUi" parent="HBoxContainer" instance=ExtResource("2_ghn27")]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
