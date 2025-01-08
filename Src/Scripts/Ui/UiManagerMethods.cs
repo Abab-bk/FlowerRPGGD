@@ -17,6 +17,7 @@ public static partial class UiManager
         public const string InventoryUi = "InventoryUi";
         public const string ItemCell = "ItemCell";
         public const string ItemSlotUi = "ItemSlotUi";
+        public const string ItemTooltip = "ItemTooltip";
         public const string LoadingScreen = "LoadingScreen";
         public const string Modal = "Modal";
         public const string PauseMenu = "PauseMenu";
@@ -550,6 +551,54 @@ public static partial class UiManager
     public static Game.Scripts.Ui.ItemSlotUi.ItemSlotUiPanel[] Get_ItemSlotUi_Instance()
     {
         return GetUiInstance<Game.Scripts.Ui.ItemSlotUi.ItemSlotUiPanel>(nameof(Game.Scripts.Ui.ItemSlotUi.ItemSlotUi));
+    }
+
+    /// <summary>
+    /// 创建 ItemTooltip, 并返回UI实例, 该函数不会打开 Ui
+    /// </summary>
+    public static Game.Scripts.Ui.ItemTooltip.ItemTooltipPanel Create_ItemTooltip()
+    {
+        return CreateUi<Game.Scripts.Ui.ItemTooltip.ItemTooltipPanel>(UiName.ItemTooltip);
+    }
+
+    /// <summary>
+    /// 打开 ItemTooltip, 并返回UI实例
+    /// </summary>
+    public static Game.Scripts.Ui.ItemTooltip.ItemTooltipPanel Open_ItemTooltip()
+    {
+        return OpenUi<Game.Scripts.Ui.ItemTooltip.ItemTooltipPanel>(UiName.ItemTooltip);
+    }
+
+    /// <summary>
+    /// 隐藏 ItemTooltip 的所有实例
+    /// </summary>
+    public static void Hide_ItemTooltip()
+    {
+        var uiInstance = Get_ItemTooltip_Instance();
+        foreach (var uiPanel in uiInstance)
+        {
+            uiPanel.HideUi();
+        }
+    }
+
+    /// <summary>
+    /// 销毁 ItemTooltip 的所有实例
+    /// </summary>
+    public static void Destroy_ItemTooltip()
+    {
+        var uiInstance = Get_ItemTooltip_Instance();
+        foreach (var uiPanel in uiInstance)
+        {
+            uiPanel.Destroy();
+        }
+    }
+
+    /// <summary>
+    /// 获取所有 ItemTooltip 的实例, 如果没有实例, 则返回一个空数组
+    /// </summary>
+    public static Game.Scripts.Ui.ItemTooltip.ItemTooltipPanel[] Get_ItemTooltip_Instance()
+    {
+        return GetUiInstance<Game.Scripts.Ui.ItemTooltip.ItemTooltipPanel>(nameof(Game.Scripts.Ui.ItemTooltip.ItemTooltip));
     }
 
     /// <summary>

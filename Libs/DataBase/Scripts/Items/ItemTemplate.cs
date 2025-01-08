@@ -23,6 +23,7 @@ public sealed partial class ItemTemplate : Luban.BeanBase
         Value = _buf.GetProperty("value").GetSingle();
         IconName = _buf.GetProperty("icon_name").GetString();
         Rarity = (Items.Rarity)_buf.GetProperty("rarity").GetInt32();
+        { var __json0 = _buf.GetProperty("affixes"); int _n0 = __json0.GetArrayLength(); Affixes = new string[_n0]; int __index0=0; foreach(JsonElement __e0 in __json0.EnumerateArray()) { string __v0;  __v0 = __e0.GetString();  Affixes[__index0++] = __v0; }   }
     }
 
     public static ItemTemplate DeserializeItemTemplate(JsonElement _buf)
@@ -30,30 +31,13 @@ public sealed partial class ItemTemplate : Luban.BeanBase
         return new Items.ItemTemplate(_buf);
     }
 
-    /// <summary>
-    /// id
-    /// </summary>
     public readonly string Id;
-    /// <summary>
-    /// name
-    /// </summary>
     public readonly string Name;
-    /// <summary>
-    /// itemType
-    /// </summary>
     public readonly Items.ItemType ItemType;
-    /// <summary>
-    /// 伤害|防御
-    /// </summary>
     public readonly float Value;
-    /// <summary>
-    /// icon_name
-    /// </summary>
     public readonly string IconName;
-    /// <summary>
-    /// 稀有度
-    /// </summary>
     public readonly Items.Rarity Rarity;
+    public readonly string[] Affixes;
    
     public const int __ID__ = 238212187;
     public override int GetTypeId() => __ID__;
@@ -71,6 +55,7 @@ public sealed partial class ItemTemplate : Luban.BeanBase
         + "value:" + Value + ","
         + "iconName:" + IconName + ","
         + "rarity:" + Rarity + ","
+        + "affixes:" + Luban.StringUtil.CollectionToString(Affixes) + ","
         + "}";
     }
 }

@@ -63,7 +63,12 @@ public partial class Debugger : Node
                 new UniqueItem(Data.Tables.TbItems.Get(_addItemId))
                 );
         }
-        
+
+        if (ImGui.Button("Get random equipment"))
+        {
+            Global.Player.Inventory.AddItem(EquipmentGenerator.GetItem(Global.Player.Stats));
+        }
+
         ImGui.InputText("Mob Id", ref _mobId, 20);
         
         if (ImGui.Button("Spawn Mob"))

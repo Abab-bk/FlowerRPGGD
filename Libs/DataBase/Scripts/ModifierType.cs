@@ -9,13 +9,13 @@
 
 
 
-namespace cfg.Stats
+namespace cfg
 { 
-    public enum StatType
+    public enum ModifierType
     {
-        MaxHealth = 0,
-        Speed = 1,
-        Luck = 2,
+        Flat = 0,
+        PercentAdd = 1,
+        PercentMult = 2,
     }
 
 } 

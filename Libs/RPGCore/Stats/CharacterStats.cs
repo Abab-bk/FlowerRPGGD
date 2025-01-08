@@ -6,23 +6,20 @@ namespace RPGCore.Stats;
 
 public class CharacterStats(StatsInfo info) : IStats
 {
-    public Vital
-        Health { get; } = new Vital(
+    public Vital Health { get; } = new Vital(
         new Stat(info.MaxHealth),
         0,
         0,
         true,
         1f
-        );
-    
-    public IStat
-        Speed { get; } = new Stat(info.Speed);
+    );
+    public IStat Speed { get; } = new Stat(info.Speed);
     
     public Vital GetVital(int statType)
     {
-        switch ((VitalType)statType)
+        switch ((StatType)statType)
         {
-            case VitalType.Health:
+            case StatType.MaxHealth:
                 return Health;
         }
         

@@ -1,10 +1,13 @@
 using DsUi;
+using Game.Scripts.Ui.ItemTooltip;
 using Godot;
 
 namespace Game.Scripts.Ui.Hud;
 
 public partial class HudPanel : Hud
 {
+    private ItemTooltipPanel ItemTooltipPanel { get; set; }
+    
     private enum Page
     {
         Home,
@@ -25,6 +28,21 @@ public partial class HudPanel : Hud
     {
         base.OnCreateUi();
         Global.Hud = this;
+
+        ItemTooltipPanel = UiManager.Create_ItemTooltip();
+
+        EventBus.ItemTooltipRequested += (item, vector2) =>
+        {
+            ItemTooltipPanel.UpdateTooltip(item);
+            ItemTooltipPanel.GlobalPosition = vector2;
+            ItemTooltipPanel.Show();
+        };
+        
+        EventBus.ItemTooltipCanceled += () =>
+        {
+            ItemTooltipPanel.Hide();
+            ItemTooltipPanel.Clean();
+        };
 
         EventBus.PlayerReady += () =>
         {

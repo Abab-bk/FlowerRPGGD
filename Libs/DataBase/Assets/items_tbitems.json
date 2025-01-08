@@ -5,7 +5,8 @@
     "item_type": 0,
     "value": 100,
     "icon_name": "SwordIcon",
-    "rarity": 0
+    "rarity": 0,
+    "affixes": []
   },
   {
     "id": "1",
@@ -13,7 +14,8 @@
     "item_type": 0,
     "value": 100,
     "icon_name": "SwordIcon",
-    "rarity": 0
+    "rarity": 0,
+    "affixes": []
   },
   {
     "id": "2",
@@ -21,7 +23,8 @@
     "item_type": 0,
     "value": 100,
     "icon_name": "SwordIcon",
-    "rarity": 0
+    "rarity": 0,
+    "affixes": []
   },
   {
     "id": "3",
@@ -29,7 +32,8 @@
     "item_type": 0,
     "value": 100,
     "icon_name": "SwordIcon",
-    "rarity": 0
+    "rarity": 0,
+    "affixes": []
   },
   {
     "id": "4",
@@ -37,7 +41,8 @@
     "item_type": 0,
     "value": 100,
     "icon_name": "SwordIcon",
-    "rarity": 0
+    "rarity": 0,
+    "affixes": []
   },
   {
     "id": "5",
@@ -45,7 +50,8 @@
     "item_type": 0,
     "value": 100,
     "icon_name": "SwordIcon",
-    "rarity": 0
+    "rarity": 0,
+    "affixes": []
   },
   {
     "id": "6",
@@ -53,7 +59,8 @@
     "item_type": 0,
     "value": 100,
     "icon_name": "SwordIcon",
-    "rarity": 0
+    "rarity": 0,
+    "affixes": []
   },
   {
     "id": "7",
@@ -61,7 +68,8 @@
     "item_type": 0,
     "value": 100,
     "icon_name": "SwordIcon",
-    "rarity": 0
+    "rarity": 0,
+    "affixes": []
   },
   {
     "id": "8",
@@ -69,7 +77,8 @@
     "item_type": 0,
     "value": 100,
     "icon_name": "SwordIcon",
-    "rarity": 0
+    "rarity": 0,
+    "affixes": []
   },
   {
     "id": "9",
@@ -77,7 +86,8 @@
     "item_type": 0,
     "value": 100,
     "icon_name": "SwordIcon",
-    "rarity": 0
+    "rarity": 0,
+    "affixes": []
   },
   {
     "id": "10",
@@ -85,7 +95,8 @@
     "item_type": 0,
     "value": 100,
     "icon_name": "SwordIcon",
-    "rarity": 0
+    "rarity": 0,
+    "affixes": []
   },
   {
     "id": "11",
@@ -93,7 +104,8 @@
     "item_type": 0,
     "value": 100,
     "icon_name": "SwordIcon",
-    "rarity": 0
+    "rarity": 0,
+    "affixes": []
   },
   {
     "id": "12",
@@ -101,7 +113,8 @@
     "item_type": 0,
     "value": 100,
     "icon_name": "SwordIcon",
-    "rarity": 0
+    "rarity": 0,
+    "affixes": []
   },
   {
     "id": "13",
@@ -109,7 +122,8 @@
     "item_type": 0,
     "value": 100,
     "icon_name": "SwordIcon",
-    "rarity": 0
+    "rarity": 0,
+    "affixes": []
   },
   {
     "id": "14",
@@ -117,7 +131,8 @@
     "item_type": 0,
     "value": 100,
     "icon_name": "SwordIcon",
-    "rarity": 0
+    "rarity": 0,
+    "affixes": []
   },
   {
     "id": "15",
@@ -125,6 +140,7 @@
     "item_type": 0,
     "value": 100,
     "icon_name": "SwordIcon",
-    "rarity": 0
+    "rarity": 0,
+    "affixes": []
   }
 ]

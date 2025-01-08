@@ -14,6 +14,14 @@ public partial class ItemCellPanel : ItemCell
     {
         base.OnCreateUi();
         S_Button.Instance.Pressed += () => OnItemClicked?.Invoke(Item);
+        
+        S_Button.Instance.MouseEntered += () =>
+        {
+            if (Item == null) return;
+            EventBus.ItemTooltipRequested?.Invoke(Item, GetGlobalMousePosition());
+        };
+        
+        S_Button.Instance.MouseExited += EventBus.ItemTooltipCanceled;
     }
 
     public ItemCellPanel Config(IItem item)

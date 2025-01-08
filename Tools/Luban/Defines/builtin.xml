@@ -6,5 +6,28 @@
             <option name="type" value="Godot.Vector2"/>
             <option name="constructor" value="ExternalTypeUtil.NewVector2"/>
         </mapper>
-    </bean>    
+    </bean>
+
+    <enum name="ModifierType">
+        <var name="Flat" value="0"/>
+        <var name="PercentAdd" value="1"/>
+        <var name="PercentMult" value="2"/>
+        <mapper target="all" codeTarget="cs-dotnet-json">
+            <option name="type" value="FlowerRpg.Stats.Modifiers.ModifierType"/>
+        </mapper>
+    </enum>
+    
+<!--    <bean name="EquipmentTemplate" parent="ItemTemplate">-->
+<!--        <var name="affixes" type="array,string"/>-->
+<!--    </bean>-->
+
+<!--    <bean name="ItemTemplate">-->
+<!--        <var name="id" type="string"/>-->
+<!--        <var name="name" type="string"/>-->
+<!--        <var name="item_type" type="Items.ItemType"/>-->
+<!--        <var name="value" type="float"/>-->
+<!--        <var name="icon_name" type="string"/>-->
+<!--        <var name="rarity" type="Items.Rarity"/>-->
+<!--    </bean>-->
+    
 </module>

@@ -16,6 +16,7 @@
     </ItemGroup>
 
     <ItemGroup>
+      <PackageReference Include="FlowerRpg.Stats" Version="2.1.0" />
       <PackageReference Include="GodotSharp" Version="4.3.0" />
     </ItemGroup>
 
