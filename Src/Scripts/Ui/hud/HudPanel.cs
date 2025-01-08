@@ -47,6 +47,7 @@ public partial class HudPanel : Hud
         EventBus.PlayerReady += () =>
         {
             S_CharacterUi.Instance.Init(
+                Global.Player.Stats,
                 Global.PlayerInventory,
                 Global.Player.Equipments
                 );

@@ -29,15 +29,36 @@ public abstract partial class CharacterUi : UiBase
     {
 
         var inst1 = L_HBoxContainer;
-        RecordNestedUi(inst1.L_CharacterEquipmentsUi.Instance, inst1, UiManager.RecordType.Open);
-        inst1.L_CharacterEquipmentsUi.Instance.OnCreateUi();
-        inst1.L_CharacterEquipmentsUi.Instance.OnInitNestedUi();
+        RecordNestedUi(inst1.L_CharacterStatsUi.Instance, inst1, UiManager.RecordType.Open);
+        inst1.L_CharacterStatsUi.Instance.OnCreateUi();
+        inst1.L_CharacterStatsUi.Instance.OnInitNestedUi();
 
         var inst2 = L_HBoxContainer;
-        RecordNestedUi(inst2.L_InventoryUi.Instance, inst2, UiManager.RecordType.Open);
-        inst2.L_InventoryUi.Instance.OnCreateUi();
-        inst2.L_InventoryUi.Instance.OnInitNestedUi();
+        RecordNestedUi(inst2.L_CharacterEquipmentsUi.Instance, inst2, UiManager.RecordType.Open);
+        inst2.L_CharacterEquipmentsUi.Instance.OnCreateUi();
+        inst2.L_CharacterEquipmentsUi.Instance.OnInitNestedUi();
 
+        var inst3 = L_HBoxContainer;
+        RecordNestedUi(inst3.L_InventoryUi.Instance, inst3, UiManager.RecordType.Open);
+        inst3.L_InventoryUi.Instance.OnCreateUi();
+        inst3.L_InventoryUi.Instance.OnInitNestedUi();
+
+    }
+
+    /// <summary>
+    /// 类型: <see cref="Game.Scripts.Ui.CharacterStatsUi.CharacterStatsUiPanel"/>, 路径: CharacterUi.HBoxContainer.CharacterStatsUi
+    /// </summary>
+    public class CharacterStatsUi : UiNode<CharacterUiPanel, Game.Scripts.Ui.CharacterStatsUi.CharacterStatsUiPanel, CharacterStatsUi>
+    {
+        public CharacterStatsUi(CharacterUiPanel uiPanel, Game.Scripts.Ui.CharacterStatsUi.CharacterStatsUiPanel node) : base(uiPanel, node) {  }
+        public override CharacterStatsUi Clone()
+        {
+            var uiNode = new CharacterStatsUi(UiPanel, (Game.Scripts.Ui.CharacterStatsUi.CharacterStatsUiPanel)Instance.Duplicate());
+            UiPanel.RecordNestedUi(uiNode.Instance, this, UiManager.RecordType.Open);
+            uiNode.Instance.OnCreateUi();
+            uiNode.Instance.OnInitNestedUi();
+            return uiNode;
+        }
     }
 
     /// <summary>
@@ -78,6 +99,19 @@ public abstract partial class CharacterUi : UiBase
     public class HBoxContainer : UiNode<CharacterUiPanel, Godot.HBoxContainer, HBoxContainer>
     {
         /// <summary>
+        /// 使用 Instance 属性获取当前节点实例对象, 节点类型: <see cref="Game.Scripts.Ui.CharacterStatsUi.CharacterStatsUiPanel"/>, 节点路径: CharacterUi.CharacterStatsUi
+        /// </summary>
+        public CharacterStatsUi L_CharacterStatsUi
+        {
+            get
+            {
+                if (_L_CharacterStatsUi == null) _L_CharacterStatsUi = new CharacterStatsUi(UiPanel, Instance.GetNode<Game.Scripts.Ui.CharacterStatsUi.CharacterStatsUiPanel>("CharacterStatsUi"));
+                return _L_CharacterStatsUi;
+            }
+        }
+        private CharacterStatsUi _L_CharacterStatsUi;
+
+        /// <summary>
         /// 使用 Instance 属性获取当前节点实例对象, 节点类型: <see cref="Game.Scripts.Ui.CharacterEquipmentsUi.CharacterEquipmentsUiPanel"/>, 节点路径: CharacterUi.CharacterEquipmentsUi
         /// </summary>
         public CharacterEquipmentsUi L_CharacterEquipmentsUi
@@ -107,6 +141,11 @@ public abstract partial class CharacterUi : UiBase
         public override HBoxContainer Clone() => new (UiPanel, (Godot.HBoxContainer)Instance.Duplicate());
     }
 
+
+    /// <summary>
+    /// 场景中唯一名称的节点, 节点类型: <see cref="Game.Scripts.Ui.CharacterStatsUi.CharacterStatsUiPanel"/>, 节点路径: CharacterUi.HBoxContainer.CharacterStatsUi
+    /// </summary>
+    public CharacterStatsUi S_CharacterStatsUi => L_HBoxContainer.L_CharacterStatsUi;
 
     /// <summary>
     /// 场景中唯一名称的节点, 节点类型: <see cref="Game.Scripts.Ui.CharacterEquipmentsUi.CharacterEquipmentsUiPanel"/>, 节点路径: CharacterUi.HBoxContainer.CharacterEquipmentsUi

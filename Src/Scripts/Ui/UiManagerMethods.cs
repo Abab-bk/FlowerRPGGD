@@ -10,6 +10,7 @@ public static partial class UiManager
         public const string AbilityLoadoutUi = "AbilityLoadoutUi";
         public const string BootSplash = "BootSplash";
         public const string CharacterEquipmentsUi = "CharacterEquipmentsUi";
+        public const string CharacterStatsUi = "CharacterStatsUi";
         public const string CharacterUi = "CharacterUi";
         public const string Credits = "Credits";
         public const string Hud = "Hud";
@@ -23,6 +24,7 @@ public static partial class UiManager
         public const string PauseMenu = "PauseMenu";
         public const string Settings = "Settings";
         public const string StartMenu = "StartMenu";
+        public const string StatItemUi = "StatItemUi";
     }
 
     /// <summary>
@@ -215,6 +217,54 @@ public static partial class UiManager
     public static Game.Scripts.Ui.CharacterEquipmentsUi.CharacterEquipmentsUiPanel[] Get_CharacterEquipmentsUi_Instance()
     {
         return GetUiInstance<Game.Scripts.Ui.CharacterEquipmentsUi.CharacterEquipmentsUiPanel>(nameof(Game.Scripts.Ui.CharacterEquipmentsUi.CharacterEquipmentsUi));
+    }
+
+    /// <summary>
+    /// 创建 CharacterStatsUi, 并返回UI实例, 该函数不会打开 Ui
+    /// </summary>
+    public static Game.Scripts.Ui.CharacterStatsUi.CharacterStatsUiPanel Create_CharacterStatsUi()
+    {
+        return CreateUi<Game.Scripts.Ui.CharacterStatsUi.CharacterStatsUiPanel>(UiName.CharacterStatsUi);
+    }
+
+    /// <summary>
+    /// 打开 CharacterStatsUi, 并返回UI实例
+    /// </summary>
+    public static Game.Scripts.Ui.CharacterStatsUi.CharacterStatsUiPanel Open_CharacterStatsUi()
+    {
+        return OpenUi<Game.Scripts.Ui.CharacterStatsUi.CharacterStatsUiPanel>(UiName.CharacterStatsUi);
+    }
+
+    /// <summary>
+    /// 隐藏 CharacterStatsUi 的所有实例
+    /// </summary>
+    public static void Hide_CharacterStatsUi()
+    {
+        var uiInstance = Get_CharacterStatsUi_Instance();
+        foreach (var uiPanel in uiInstance)
+        {
+            uiPanel.HideUi();
+        }
+    }
+
+    /// <summary>
+    /// 销毁 CharacterStatsUi 的所有实例
+    /// </summary>
+    public static void Destroy_CharacterStatsUi()
+    {
+        var uiInstance = Get_CharacterStatsUi_Instance();
+        foreach (var uiPanel in uiInstance)
+        {
+            uiPanel.Destroy();
+        }
+    }
+
+    /// <summary>
+    /// 获取所有 CharacterStatsUi 的实例, 如果没有实例, 则返回一个空数组
+    /// </summary>
+    public static Game.Scripts.Ui.CharacterStatsUi.CharacterStatsUiPanel[] Get_CharacterStatsUi_Instance()
+    {
+        return GetUiInstance<Game.Scripts.Ui.CharacterStatsUi.CharacterStatsUiPanel>(nameof(Game.Scripts.Ui.CharacterStatsUi.CharacterStatsUi));
     }
 
     /// <summary>
@@ -839,6 +889,54 @@ public static partial class UiManager
     public static Game.Scripts.Ui.StartMenu.StartMenuPanel[] Get_StartMenu_Instance()
     {
         return GetUiInstance<Game.Scripts.Ui.StartMenu.StartMenuPanel>(nameof(Game.Scripts.Ui.StartMenu.StartMenu));
+    }
+
+    /// <summary>
+    /// 创建 StatItemUi, 并返回UI实例, 该函数不会打开 Ui
+    /// </summary>
+    public static Game.Scripts.Ui.StatItemUi.StatItemUiPanel Create_StatItemUi()
+    {
+        return CreateUi<Game.Scripts.Ui.StatItemUi.StatItemUiPanel>(UiName.StatItemUi);
+    }
+
+    /// <summary>
+    /// 打开 StatItemUi, 并返回UI实例
+    /// </summary>
+    public static Game.Scripts.Ui.StatItemUi.StatItemUiPanel Open_StatItemUi()
+    {
+        return OpenUi<Game.Scripts.Ui.StatItemUi.StatItemUiPanel>(UiName.StatItemUi);
+    }
+
+    /// <summary>
+    /// 隐藏 StatItemUi 的所有实例
+    /// </summary>
+    public static void Hide_StatItemUi()
+    {
+        var uiInstance = Get_StatItemUi_Instance();
+        foreach (var uiPanel in uiInstance)
+        {
+            uiPanel.HideUi();
+        }
+    }
+
+    /// <summary>
+    /// 销毁 StatItemUi 的所有实例
+    /// </summary>
+    public static void Destroy_StatItemUi()
+    {
+        var uiInstance = Get_StatItemUi_Instance();
+        foreach (var uiPanel in uiInstance)
+        {
+            uiPanel.Destroy();
+        }
+    }
+
+    /// <summary>
+    /// 获取所有 StatItemUi 的实例, 如果没有实例, 则返回一个空数组
+    /// </summary>
+    public static Game.Scripts.Ui.StatItemUi.StatItemUiPanel[] Get_StatItemUi_Instance()
+    {
+        return GetUiInstance<Game.Scripts.Ui.StatItemUi.StatItemUiPanel>(nameof(Game.Scripts.Ui.StatItemUi.StatItemUi));
     }
 
 }
