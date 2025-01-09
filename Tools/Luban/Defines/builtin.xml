@@ -18,17 +18,14 @@
     </enum>
     
     <bean name="StatsInfo">
-        <var name="MaxHealth" type="float"/>
-        <var name="MaxMana" type="float"/>
-<!--        <var name="Strength" type="float"/>-->
-<!--        <var name="Intelligence" type="float"/>-->
-<!--        <var name="Willpower" type="float"/>-->
-<!--        <var name="Dexterity" type="float"/>-->
-        <var name="Level" type="float"/>
+        <var name="Strength" type="float"/>
+        <var name="Intelligence" type="float"/>
+        <var name="Willpower" type="float"/>
+        <var name="Dexterity" type="float"/>
     </bean>
 
     <module name="Items">
-        <enum name="ItemType">
+        <enum unique="true" name="ItemType">
             <!-- Accessories -->
             <var name="Amulet"/>
             <var name="Ring"/>
@@ -92,11 +89,16 @@
             <var name="LightningDamage"/>
             <var name="PhysicalDamage"/>
 
+            <var name="OverPowerDamage"/>
+
             <var name="VulnerableDamage"/>
 
             <!-- Defensive stats -->
             <var name="Armor"/>
+
             <var name="MaxHealth"/>
+            <var name="MaxMana"/>
+            
             <var name="DamageReduction"/>
 
             <var name="FireResistance"/>
@@ -105,7 +107,9 @@
             <var name="PhysicalResistance"/>
 
             <var name="DodgeChance"/>
-
+            
+            <var name="HealingReceived"/>
+            
             <!-- Utility stats -->
             <var name="LuckyHitChance"/>
             <var name="CooldownReduction"/>

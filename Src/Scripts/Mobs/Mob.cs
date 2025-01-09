@@ -1,4 +1,5 @@
 using cfg;
+using cfg.Stats;
 using Game.Scripts.Base;
 using Game.Scripts.Prefabs;
 using Godot;
@@ -22,7 +23,7 @@ public partial class Mob : CharacterEntity
         Ai = GetNode<MobAi>("MobAi");
         Ai.Init(StateMachine, this);
 
-        Stats.Health.OnValueToMin += Die;
+        Stats.GetVital(VitalType.Health).OnValueToMin += Die;
     }
 
     protected virtual void Die()
@@ -33,13 +34,13 @@ public partial class Mob : CharacterEntity
     protected virtual void OnHurt(Attack attack)
     {
         Animation2.Play("OnHurt");
-        Stats.Health.Decrease(attack.Damage);
+        Stats.GetVital(VitalType.Health).Decrease(attack.Damage);
     }
 
     public void MoveToPlayer()
     {
         Velocity = Velocity with { X = (GlobalPosition.DirectionTo(Global.Player.GlobalPosition) *
-                                      Stats.Speed.Value).X };
+                                      Stats.GetStat(StatType.MovementSpeed).Value).X };
     }
 
     public static Mob Create(CharacterInfo characterInfo)

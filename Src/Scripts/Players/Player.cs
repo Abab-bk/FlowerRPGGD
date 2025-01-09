@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Linq;
 using AcidUtilities;
 using cfg;
+using cfg.Stats;
 using Godot;
 using Game.Scripts.Base;
 using Game.Scripts.Interactions;
@@ -100,7 +101,7 @@ public partial class Player : CharacterEntity
                 var x = Input.GetAxis(
                     "Left",
                     "Right"
-                    ) * Stats.Speed.Value;
+                    ) * Stats.GetStat(StatType.MovementSpeed).Value;
 
                 if (IsOnFloor() && Input.IsActionJustPressed("Jump"))
                 {

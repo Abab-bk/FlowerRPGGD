@@ -17,8 +17,10 @@ public sealed partial class StatsInfo : Luban.BeanBase
 {
     public StatsInfo(JsonElement _buf) 
     {
-        MaxHealth = _buf.GetProperty("max_health").GetSingle();
-        Speed = _buf.GetProperty("speed").GetSingle();
+        Strength = _buf.GetProperty("Strength").GetSingle();
+        Intelligence = _buf.GetProperty("Intelligence").GetSingle();
+        Willpower = _buf.GetProperty("Willpower").GetSingle();
+        Dexterity = _buf.GetProperty("Dexterity").GetSingle();
     }
 
     public static StatsInfo DeserializeStatsInfo(JsonElement _buf)
@@ -26,8 +28,10 @@ public sealed partial class StatsInfo : Luban.BeanBase
         return new StatsInfo(_buf);
     }
 
-    public readonly float MaxHealth;
-    public readonly float Speed;
+    public readonly float Strength;
+    public readonly float Intelligence;
+    public readonly float Willpower;
+    public readonly float Dexterity;
    
     public const int __ID__ = -69315123;
     public override int GetTypeId() => __ID__;
@@ -39,8 +43,10 @@ public sealed partial class StatsInfo : Luban.BeanBase
     public override string ToString()
     {
         return "{ "
-        + "maxHealth:" + MaxHealth + ","
-        + "speed:" + Speed + ","
+        + "Strength:" + Strength + ","
+        + "Intelligence:" + Intelligence + ","
+        + "Willpower:" + Willpower + ","
+        + "Dexterity:" + Dexterity + ","
         + "}";
     }
 }

@@ -5,8 +5,10 @@
     "level": 1,
     "scene_name": "Player",
     "stats": {
-      "max_health": 100,
-      "speed": 300
+      "Strength": 10,
+      "Intelligence": 10,
+      "Willpower": 10,
+      "Dexterity": 10
     }
   }
 ]

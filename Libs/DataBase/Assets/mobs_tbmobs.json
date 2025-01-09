@@ -5,8 +5,10 @@
     "level": 1,
     "scene_name": "SlimeGreen",
     "stats": {
-      "max_health": 100,
-      "speed": 50
+      "Strength": 10,
+      "Intelligence": 10,
+      "Willpower": 10,
+      "Dexterity": 10
     }
   }
 ]

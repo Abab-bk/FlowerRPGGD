@@ -40,6 +40,7 @@ public partial class TbConstants
     /// Gravity
     /// </summary>
      public float Gravity => _data.Gravity;
+     public Stats.StatType[] CoreStats => _data.CoreStats;
     
     public void ResolveRef(Tables tables)
     {
