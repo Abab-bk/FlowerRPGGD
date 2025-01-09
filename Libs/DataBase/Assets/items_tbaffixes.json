@@ -2,7 +2,7 @@
   {
     "id": "a_test_affix",
     "name": "Power",
-    "target_stat_type": 1,
+    "target_stat_type": 25,
     "value_type": 1,
     "value_range": [
       20,

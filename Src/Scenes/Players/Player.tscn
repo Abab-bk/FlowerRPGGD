@@ -61,7 +61,7 @@ _data = {
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fcvs6"]
-size = Vector2(17, 44)
+size = Vector2(17, 43)
 
 [sub_resource type="StateConfig" id="StateConfig_ts4ni"]
 state_name = &"Idle"
@@ -149,7 +149,7 @@ transition_config_list = Array[TransitionConfig]([SubResource("TransitionConfig_
 variable_config_list = Array[VariableConfig]([SubResource("VariableConfig_kxk7k"), SubResource("VariableConfig_pw4rn")])
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u1bff"]
-size = Vector2(76, 92)
+size = Vector2(76, 67)
 
 [sub_resource type="Animation" id="Animation_seycc"]
 resource_name = "Attack"
@@ -227,7 +227,7 @@ libraries = {
 speed_scale = 0.5
 
 [node name="Sprite2D" parent="Graphics" index="2"]
-position = Vector2(0, -32)
+position = Vector2(0, -8)
 texture = ExtResource("3_oshk5")
 flip_h = true
 hframes = 10
@@ -235,7 +235,7 @@ vframes = 7
 region_rect = Rect2(31, 21, 17, 43)
 
 [node name="CollisionShape2D" parent="." index="1"]
-position = Vector2(0.5, -22)
+position = Vector2(0, 2.5)
 shape = SubResource("RectangleShape2D_fcvs6")
 
 [node name="HFSM" parent="." index="2"]
@@ -254,6 +254,7 @@ collision_layer = 0
 collision_mask = 16
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea" index="0"]
+position = Vector2(0, 22.5)
 shape = SubResource("RectangleShape2D_u1bff")
 debug_color = Color(0.829516, 0.341638, 0.516487, 0.42)
 

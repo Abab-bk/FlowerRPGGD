@@ -13,9 +13,25 @@ namespace cfg.Items
 { 
     public enum ItemType
     {
-        Sword = 0,
-        Head = 1,
-        Armor = 2,
+        Amulet = 0,
+        Ring = 1,
+        Sword = 2,
+        HugeSword = 3,
+        Axe = 4,
+        HugeAxe = 5,
+        Dagger = 6,
+        Wand = 7,
+        Staff = 8,
+        Bow = 9,
+        Shield = 10,
+        Helmet = 11,
+        Chest = 12,
+        Gloves = 13,
+        Pants = 14,
+        Boots = 15,
+        HealingPotion = 16,
+        ManaPotion = 17,
+        Gem = 18,
     }
 
 } 

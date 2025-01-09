@@ -1,0 +1,12 @@
+﻿name: Teleport
+icon_name: Fireball
+cooldown: 2
+ability_class: DataDriven
+behaviors: [Point]
+modifiers: []
+on_active:
+  - ability_action_type: FireProjectile
+    projectile_name: Fireball
+    move_speed: 500
+    rotation: 0
+    damage: 10

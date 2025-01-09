@@ -5,9 +5,24 @@ namespace RPGCore.Players;
 
 public class PlayerEquipments
 {
-    public IItemSlot Head { get; private set; } = new ItemSlot([ItemType.Head]);
-    public IItemSlot Body { get; private set; } = new ItemSlot([ItemType.Armor]);
-    public IItemSlot Weapon { get; private set; } = new ItemSlot([ItemType.Sword]);
+    public IItemSlot Helmet { get; private set; } = new ItemSlot([ItemType.Helmet]);
+    public IItemSlot Chest { get; private set; } = new ItemSlot([ItemType.Chest]);
+    public IItemSlot Gloves { get; private set; } = new ItemSlot([ItemType.Gloves]);
+    public IItemSlot Pants { get; private set; } = new ItemSlot([ItemType.Pants]);
+    public IItemSlot Boots { get; private set; } = new ItemSlot([ItemType.Boots]);
+    public IItemSlot Weapon { get; private set; } = new ItemSlot(
+        [
+            ItemType.Sword,
+            ItemType.Axe,
+            ItemType.Dagger,
+            ItemType.Wand,
+            ItemType.Staff,
+            ItemType.Bow,
+            ItemType.Shield,
+            ItemType.HugeSword,
+            ItemType.HugeAxe
+        ]
+        );
 
     public bool TryEquip(IItem item, out IItem? oldItem)
     {

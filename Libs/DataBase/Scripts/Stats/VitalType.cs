@@ -14,6 +14,7 @@ namespace cfg.Stats
     public enum VitalType
     {
         Health = 0,
+        Mana = 1,
     }
 
 } 

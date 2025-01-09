@@ -2,7 +2,7 @@
   {
     "id": "i_e_sword1",
     "name": "Sword1",
-    "item_type": 0,
+    "item_type": 2,
     "value": 100,
     "icon_name": "SwordIcon",
     "rarity": 0,

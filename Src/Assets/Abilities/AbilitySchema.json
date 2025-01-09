@@ -6,6 +6,14 @@
   "type": "object",
   
   "properties": {
+    "name": {
+      "type": "string"
+    },
+    
+    "cooldown": {
+      "type": "number"
+    },
+    
     "ability_class": {
       "type": "string",
       "enum": ["DataDriven", "Script"]
@@ -31,6 +39,6 @@
       "type": "array"
     },
     
-    "required": ["ability_class", "behaviors", "icon_name", "modifiers"]
+    "required": ["name","ability_class", "behaviors", "icon_name", "modifiers"]
   }
 }

@@ -17,6 +17,106 @@
         </mapper>
     </enum>
     
+    <bean name="StatsInfo">
+        <var name="MaxHealth" type="float"/>
+        <var name="MaxMana" type="float"/>
+<!--        <var name="Strength" type="float"/>-->
+<!--        <var name="Intelligence" type="float"/>-->
+<!--        <var name="Willpower" type="float"/>-->
+<!--        <var name="Dexterity" type="float"/>-->
+        <var name="Level" type="float"/>
+    </bean>
+
+    <module name="Items">
+        <enum name="ItemType">
+            <!-- Accessories -->
+            <var name="Amulet"/>
+            <var name="Ring"/>
+
+            <!-- Weapons -->
+            <var name="Sword"/>
+            <var name="HugeSword"/>
+            <var name="Axe"/>
+            <var name="HugeAxe"/>
+
+            <var name="Dagger"/>
+            <var name="Wand"/>
+            <var name="Staff"/>
+            <var name="Bow"/>
+            <var name="Shield"/>
+
+            <!-- Armor -->
+            <var name="Helmet"/>
+            <var name="Chest"/>
+            <var name="Gloves"/>
+            <var name="Pants"/>
+            <var name="Boots"/>
+
+            <!-- Consumables -->
+            <var name="HealingPotion"/>
+            <var name="ManaPotion"/>
+            <var name="Gem"/>
+        </enum>
+
+        <enum unique="true" name="Rarity">
+            <var name="Common"/> <!-- No additional affixes -->
+            <var name="Magic"/> <!-- 1 additional affixes -->
+            <var name="Rare"/> <!-- 3 additional affixes -->
+            <var name="Legendary"/> <!-- 4 additional affixes -->
+            <var name="Unique"/> <!-- has special affixes -->
+            <var name="Mythic"/>
+        </enum>
+    </module>
+    
+    <module name="Stats">
+        <enum unique="true" name="VitalType">
+            <var name="Health"/>
+            <var name="Mana"/>
+        </enum>
+
+        <enum unique="true" name="StatType">
+            <!-- Core stats  -->
+            <var name="Strength"/>
+            <var name="Intelligence"/>
+            <var name="Willpower"/>
+            <var name="Dexterity"/>
+
+            <!-- Offensive stats -->
+            <var name="WeaponDamage"/>
+            <var name="AttackSpeed"/>
+            <var name="CriticalChance"/>
+            <var name="CriticalDamage"/>
+
+            <var name="FireDamage"/>
+            <var name="ColdDamage"/>
+            <var name="LightningDamage"/>
+            <var name="PhysicalDamage"/>
+
+            <var name="VulnerableDamage"/>
+
+            <!-- Defensive stats -->
+            <var name="Armor"/>
+            <var name="MaxHealth"/>
+            <var name="DamageReduction"/>
+
+            <var name="FireResistance"/>
+            <var name="ColdResistance"/>
+            <var name="LightningResistance"/>
+            <var name="PhysicalResistance"/>
+
+            <var name="DodgeChance"/>
+
+            <!-- Utility stats -->
+            <var name="LuckyHitChance"/>
+            <var name="CooldownReduction"/>
+            <var name="ResourceCostReduction"/>
+            <var name="SkillRanks"/>
+            <var name="MovementSpeed"/>
+            <var name="Thorns"/>
+
+        </enum>
+    </module>
+    
 <!--    <bean name="EquipmentTemplate" parent="ItemTemplate">-->
 <!--        <var name="affixes" type="array,string"/>-->
 <!--    </bean>-->

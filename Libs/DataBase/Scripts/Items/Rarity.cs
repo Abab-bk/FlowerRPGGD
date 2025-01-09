@@ -14,10 +14,11 @@ namespace cfg.Items
     public enum Rarity
     {
         Common = 0,
-        Rare = 1,
-        Magic = 2,
-        Epic = 3,
-        Legendary = 4,
+        Magic = 1,
+        Rare = 2,
+        Legendary = 3,
+        Unique = 4,
+        Mythic = 5,
     }
 
 } 

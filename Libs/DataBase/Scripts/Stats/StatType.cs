@@ -13,9 +13,33 @@ namespace cfg.Stats
 { 
     public enum StatType
     {
-        MaxHealth = 0,
-        Speed = 1,
-        Luck = 2,
+        Strength = 0,
+        Intelligence = 1,
+        Willpower = 2,
+        Dexterity = 3,
+        WeaponDamage = 4,
+        AttackSpeed = 5,
+        CriticalChance = 6,
+        CriticalDamage = 7,
+        FireDamage = 8,
+        ColdDamage = 9,
+        LightningDamage = 10,
+        PhysicalDamage = 11,
+        VulnerableDamage = 12,
+        Armor = 13,
+        MaxHealth = 14,
+        DamageReduction = 15,
+        FireResistance = 16,
+        ColdResistance = 17,
+        LightningResistance = 18,
+        PhysicalResistance = 19,
+        DodgeChance = 20,
+        LuckyHitChance = 21,
+        CooldownReduction = 22,
+        ResourceCostReduction = 23,
+        SkillRanks = 24,
+        MovementSpeed = 25,
+        Thorns = 26,
     }
 
 } 

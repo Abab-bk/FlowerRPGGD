@@ -30,7 +30,7 @@ public class CharacterStats(StatsInfo info) : IStats
     {
         switch ((StatType)statType)
         {
-            case StatType.Speed:
+            case StatType.MovementSpeed:
                 return Speed;
             case StatType.MaxHealth:
                 return Health.MaxValue;
