@@ -1,0 +1,121 @@
+[
+  {
+    "id": "a_c_6001",
+    "name": "坚毅",
+    "target_stat_type": 16,
+    "value_type": 0,
+    "value_range": [
+      424457
+    ]
+  },
+  {
+    "id": "a_c_6002",
+    "name": "祖母绿",
+    "target_stat_type": 15,
+    "value_type": 1,
+    "value_range": [
+      44.9,
+      48.4
+    ]
+  },
+  {
+    "id": "a_c_6003",
+    "name": "朱砂",
+    "target_stat_type": 31,
+    "value_type": 1,
+    "value_range": [
+      12.5,
+      18
+    ]
+  },
+  {
+    "id": "a_c_6004",
+    "name": "生锈",
+    "target_stat_type": 5,
+    "value_type": 1,
+    "value_range": [
+      8.3,
+      10
+    ]
+  },
+  {
+    "id": "a_c_6005",
+    "name": "雄黄",
+    "target_stat_type": 6,
+    "value_type": 1,
+    "value_range": [
+      7,
+      8
+    ]
+  },
+  {
+    "id": "a_c_6006",
+    "name": "锯齿",
+    "target_stat_type": 27,
+    "value_type": 1,
+    "value_range": [
+      7,
+      8
+    ]
+  },
+  {
+    "id": "a_c_6007",
+    "name": "分叉",
+    "target_stat_type": 24,
+    "value_type": 1,
+    "value_range": [
+      10,
+      12
+    ]
+  },
+  {
+    "id": "a_c_6008",
+    "name": "红玉",
+    "target_stat_type": 20,
+    "value_type": 1,
+    "value_range": [
+      40,
+      50
+    ]
+  },
+  {
+    "id": "a_c_6009",
+    "name": "洋红",
+    "target_stat_type": 19,
+    "value_type": 1,
+    "value_range": [
+      40,
+      50
+    ]
+  },
+  {
+    "id": "a_c_6010",
+    "name": "朱红",
+    "target_stat_type": 21,
+    "value_type": 1,
+    "value_range": [
+      40,
+      50
+    ]
+  },
+  {
+    "id": "a_c_6011",
+    "name": "滚动",
+    "target_stat_type": 22,
+    "value_type": 1,
+    "value_range": [
+      40,
+      50
+    ]
+  },
+  {
+    "id": "a_c_6012",
+    "name": "红之",
+    "target_stat_type": 1,
+    "value_type": 1,
+    "value_range": [
+      11.5,
+      15.7
+    ]
+  }
+]

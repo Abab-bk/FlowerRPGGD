@@ -1,0 +1,121 @@
+[
+  {
+    "id": "a_c_7001",
+    "name": "坚毅",
+    "target_stat_type": 16,
+    "value_type": 0,
+    "value_range": [
+      424457
+    ]
+  },
+  {
+    "id": "a_c_7002",
+    "name": "红锆石",
+    "target_stat_type": 15,
+    "value_type": 1,
+    "value_range": [
+      44.9,
+      48.4
+    ]
+  },
+  {
+    "id": "a_c_7003",
+    "name": "绿松石",
+    "target_stat_type": 31,
+    "value_type": 1,
+    "value_range": [
+      12.5,
+      18
+    ]
+  },
+  {
+    "id": "a_c_7004",
+    "name": "记忆",
+    "target_stat_type": 5,
+    "value_type": 1,
+    "value_range": [
+      8.3,
+      10
+    ]
+  },
+  {
+    "id": "a_c_7005",
+    "name": "暗褐色",
+    "target_stat_type": 6,
+    "value_type": 1,
+    "value_range": [
+      7,
+      8
+    ]
+  },
+  {
+    "id": "a_c_7006",
+    "name": "奸诈",
+    "target_stat_type": 27,
+    "value_type": 1,
+    "value_range": [
+      7,
+      8
+    ]
+  },
+  {
+    "id": "a_c_7007",
+    "name": "成功",
+    "target_stat_type": 24,
+    "value_type": 1,
+    "value_range": [
+      10,
+      12
+    ]
+  },
+  {
+    "id": "a_c_7008",
+    "name": "光轮",
+    "target_stat_type": 20,
+    "value_type": 1,
+    "value_range": [
+      40,
+      50
+    ]
+  },
+  {
+    "id": "a_c_7009",
+    "name": "优胜",
+    "target_stat_type": 19,
+    "value_type": 1,
+    "value_range": [
+      40,
+      50
+    ]
+  },
+  {
+    "id": "a_c_7010",
+    "name": "狂信",
+    "target_stat_type": 21,
+    "value_type": 1,
+    "value_range": [
+      40,
+      50
+    ]
+  },
+  {
+    "id": "a_c_7011",
+    "name": "猛烈",
+    "target_stat_type": 22,
+    "value_type": 1,
+    "value_range": [
+      40,
+      50
+    ]
+  },
+  {
+    "id": "a_c_7012",
+    "name": "狂怒",
+    "target_stat_type": 1,
+    "value_type": 1,
+    "value_range": [
+      11.5,
+      15.7
+    ]
+  }
+]

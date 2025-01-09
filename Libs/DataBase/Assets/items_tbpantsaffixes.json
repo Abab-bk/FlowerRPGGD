@@ -1,0 +1,88 @@
+[
+  {
+    "id": "a_c_4001",
+    "name": "坚毅",
+    "target_stat_type": 16,
+    "value_type": 0,
+    "value_range": [
+      424457
+    ]
+  },
+  {
+    "id": "a_c_4002",
+    "name": "钴",
+    "target_stat_type": 15,
+    "value_type": 0,
+    "value_range": [
+      226285
+    ]
+  },
+  {
+    "id": "a_c_4003",
+    "name": "蔚蓝",
+    "target_stat_type": 24,
+    "value_type": 1,
+    "value_range": [
+      10,
+      12
+    ]
+  },
+  {
+    "id": "a_c_4004",
+    "name": "青金石",
+    "target_stat_type": 20,
+    "value_type": 1,
+    "value_range": [
+      40,
+      50
+    ]
+  },
+  {
+    "id": "a_c_4005",
+    "name": "猩红",
+    "target_stat_type": 19,
+    "value_type": 1,
+    "value_range": [
+      40,
+      50
+    ]
+  },
+  {
+    "id": "a_c_4006",
+    "name": "赤褐",
+    "target_stat_type": 21,
+    "value_type": 1,
+    "value_range": [
+      40,
+      50
+    ]
+  },
+  {
+    "id": "a_c_4007",
+    "name": "石榴红",
+    "target_stat_type": 22,
+    "value_type": 1,
+    "value_range": [
+      40,
+      50
+    ]
+  },
+  {
+    "id": "a_c_4008",
+    "name": "红宝石",
+    "target_stat_type": 32,
+    "value_type": 0,
+    "value_range": [
+      276285
+    ]
+  },
+  {
+    "id": "a_c_4009",
+    "name": "红柑",
+    "target_stat_type": 1,
+    "value_type": 0,
+    "value_range": [
+      107121
+    ]
+  }
+]

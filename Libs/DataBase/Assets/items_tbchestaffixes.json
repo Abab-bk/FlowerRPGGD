@@ -1,0 +1,70 @@
+[
+  {
+    "id": "a_c_1001",
+    "name": "坚固",
+    "target_stat_type": 16,
+    "value_type": 0,
+    "value_range": [
+      424457
+    ]
+  },
+  {
+    "id": "a_c_1002",
+    "name": "魁梧",
+    "target_stat_type": 24,
+    "value_type": 1,
+    "value_range": [
+      10,
+      12
+    ]
+  },
+  {
+    "id": "a_c_1003",
+    "name": "健壮",
+    "target_stat_type": 20,
+    "value_type": 1,
+    "value_range": [
+      40,
+      50
+    ]
+  },
+  {
+    "id": "a_c_1004",
+    "name": "苍白",
+    "target_stat_type": 19,
+    "value_type": 1,
+    "value_range": [
+      40,
+      50
+    ]
+  },
+  {
+    "id": "a_c_1005",
+    "name": "齿骨",
+    "target_stat_type": 21,
+    "value_type": 1,
+    "value_range": [
+      40,
+      50
+    ]
+  },
+  {
+    "id": "a_c_1006",
+    "name": "白骨",
+    "target_stat_type": 22,
+    "value_type": 1,
+    "value_range": [
+      40,
+      50
+    ]
+  },
+  {
+    "id": "a_c_1007",
+    "name": "象牙",
+    "target_stat_type": 32,
+    "value_type": 0,
+    "value_range": [
+      276285
+    ]
+  }
+]

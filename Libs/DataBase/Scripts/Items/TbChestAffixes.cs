@@ -13,12 +13,12 @@ using System.Text.Json;
 
 namespace cfg.Items
 {
-public partial class TbAffixes
+public partial class TbChestAffixes
 {
     private readonly System.Collections.Generic.Dictionary<string, Items.AffixTemplate> _dataMap;
     private readonly System.Collections.Generic.List<Items.AffixTemplate> _dataList;
     
-    public TbAffixes(JsonElement _buf)
+    public TbChestAffixes(JsonElement _buf)
     {
         _dataMap = new System.Collections.Generic.Dictionary<string, Items.AffixTemplate>();
         _dataList = new System.Collections.Generic.List<Items.AffixTemplate>();

@@ -1,0 +1,139 @@
+[
+  {
+    "id": "a_c_2001",
+    "name": "忠诚",
+    "target_stat_type": 16,
+    "value_type": 0,
+    "value_range": [
+      424457
+    ]
+  },
+  {
+    "id": "a_c_2002",
+    "name": "北风",
+    "target_stat_type": 15,
+    "value_type": 0,
+    "value_range": [
+      226235
+    ]
+  },
+  {
+    "id": "a_c_2003",
+    "name": "寒冬",
+    "target_stat_type": 5,
+    "value_type": 1,
+    "value_range": [
+      8.3,
+      10
+    ]
+  },
+  {
+    "id": "a_c_2004",
+    "name": "灰烬",
+    "target_stat_type": 6,
+    "value_type": 1,
+    "value_range": [
+      7,
+      8
+    ]
+  },
+  {
+    "id": "a_c_2005",
+    "name": "烈焰",
+    "target_stat_type": 27,
+    "value_type": 1,
+    "value_range": [
+      8,
+      10
+    ]
+  },
+  {
+    "id": "a_c_2006",
+    "name": "闷烧",
+    "target_stat_type": 7,
+    "value_type": 1,
+    "value_range": [
+      40,
+      50
+    ]
+  },
+  {
+    "id": "a_c_2007",
+    "name": "烟雾",
+    "target_stat_type": 13,
+    "value_type": 1,
+    "value_range": [
+      60,
+      70
+    ]
+  },
+  {
+    "id": "a_c_2008",
+    "name": "燃烧",
+    "target_stat_type": 14,
+    "value_type": 1,
+    "value_range": [
+      40,
+      50
+    ]
+  },
+  {
+    "id": "a_c_2009",
+    "name": "浓缩",
+    "target_stat_type": 24,
+    "value_type": 1,
+    "value_range": [
+      10,
+      12
+    ]
+  },
+  {
+    "id": "a_c_2010",
+    "name": "静电",
+    "target_stat_type": 20,
+    "value_type": 1,
+    "value_range": [
+      40,
+      50
+    ]
+  },
+  {
+    "id": "a_c_2011",
+    "name": "发光",
+    "target_stat_type": 19,
+    "value_type": 1,
+    "value_range": [
+      40,
+      50
+    ]
+  },
+  {
+    "id": "a_c_2012",
+    "name": "嗡鸣",
+    "target_stat_type": 21,
+    "value_type": 1,
+    "value_range": [
+      40,
+      50
+    ]
+  },
+  {
+    "id": "a_c_2013",
+    "name": "弧光",
+    "target_stat_type": 22,
+    "value_type": 1,
+    "value_range": [
+      40,
+      50
+    ]
+  },
+  {
+    "id": "a_c_2014",
+    "name": "震撼",
+    "target_stat_type": 1,
+    "value_type": 0,
+    "value_range": [
+      107121
+    ]
+  }
+]

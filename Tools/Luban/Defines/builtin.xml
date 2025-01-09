@@ -25,6 +25,14 @@
     </bean>
 
     <module name="Items">
+        <bean name="AffixTemplate">
+            <var name="id" type="string"/>
+            <var name="name" type="string"/>
+            <var name="target_stat_type" type="Stats.StatType"/>
+            <var name="value_type" type="ModifierType"/>
+            <var name="value_range" type="array,float"/>
+        </bean>
+        
         <enum unique="true" name="ItemType">
             <!-- Accessories -->
             <var name="Amulet"/>
@@ -87,6 +95,7 @@
             <var name="FireDamage"/>
             <var name="ColdDamage"/>
             <var name="LightningDamage"/>
+            <var name="PoisonDamage"/>
             <var name="PhysicalDamage"/>
 
             <var name="OverPowerDamage"/>
@@ -104,7 +113,9 @@
             <var name="FireResistance"/>
             <var name="ColdResistance"/>
             <var name="LightningResistance"/>
+            <var name="PoisonResistance"/>
             <var name="PhysicalResistance"/>
+            <var name="AllResistance"/>
 
             <var name="DodgeChance"/>
             

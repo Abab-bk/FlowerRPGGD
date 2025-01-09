@@ -1,4 +1,6 @@
-﻿using DataBase;
+﻿using cfg.Items;
+using DataBase;
+using FastEnumUtility;
 using RPGCore.Items.Affixes;
 using RPGCore.Stats;
 using Shared;
@@ -13,13 +15,14 @@ public static class EquipmentGenerator
 
         var affixes = new List<Affix>();
         
-        foreach (var affixId in equipmentTemplate.Affixes)
-        {
-            if (affixId == null) continue;
-            affixes.Add(new Affix(Data.Tables.TbAffixes.Get(affixId), stats));
-        }
+        // foreach (var affixId in equipmentTemplate.Affixes)
+        // {
+        //     if (affixId == null) continue;
+        //     // TODO: Fix
+        //     // affixes.Add(new Affix(Data.Tables.TbAffixes.Get(affixId), stats));
+        // }
         
-        var equipment = new Equipment(equipmentTemplate, affixes);
+        var equipment = new Equipment(equipmentTemplate, affixes); ;
         
         return equipment;
     }

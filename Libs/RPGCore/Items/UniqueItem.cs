@@ -2,10 +2,17 @@
 
 namespace RPGCore.Items;
 
-public class UniqueItem(ItemTemplate template) : IItem
+public class UniqueItem : IItem
 {
-    public string Name => Template.Name;
-    public ItemTemplate Template { get; } = template;
+    protected string DisplayName;
+    public string Name => DisplayName;
+    public ItemTemplate Template { get; }
     
     public IItem Clone() => new UniqueItem(Template);
+
+    public UniqueItem(ItemTemplate template)
+    {
+        Template = template;
+        DisplayName = template.Name;
+    }
 }

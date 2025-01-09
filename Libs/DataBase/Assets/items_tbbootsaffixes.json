@@ -1,0 +1,89 @@
+[
+  {
+    "id": "a_c_5001",
+    "name": "坚毅",
+    "target_stat_type": 16,
+    "value_type": 0,
+    "value_range": [
+      424457
+    ]
+  },
+  {
+    "id": "a_c_5002",
+    "name": "赭黄",
+    "target_stat_type": 15,
+    "value_type": 0,
+    "value_range": [
+      226235
+    ]
+  },
+  {
+    "id": "a_c_5003",
+    "name": "珊瑚",
+    "target_stat_type": 31,
+    "value_type": 1,
+    "value_range": [
+      12.5,
+      18
+    ]
+  },
+  {
+    "id": "a_c_5004",
+    "name": "琥珀",
+    "target_stat_type": 24,
+    "value_type": 1,
+    "value_range": [
+      10,
+      12
+    ]
+  },
+  {
+    "id": "a_c_5005",
+    "name": "樟木",
+    "target_stat_type": 20,
+    "value_type": 1,
+    "value_range": [
+      40,
+      50
+    ]
+  },
+  {
+    "id": "a_c_5006",
+    "name": "龙涎香",
+    "target_stat_type": 19,
+    "value_type": 1,
+    "value_range": [
+      40,
+      50
+    ]
+  },
+  {
+    "id": "a_c_5007",
+    "name": "海蓝",
+    "target_stat_type": 21,
+    "value_type": 1,
+    "value_range": [
+      40,
+      50
+    ]
+  },
+  {
+    "id": "a_c_5008",
+    "name": "铬绿",
+    "target_stat_type": 22,
+    "value_type": 1,
+    "value_range": [
+      40,
+      50
+    ]
+  },
+  {
+    "id": "a_c_5009",
+    "name": "翡翠",
+    "target_stat_type": 1,
+    "value_type": 0,
+    "value_range": [
+      107121
+    ]
+  }
+]

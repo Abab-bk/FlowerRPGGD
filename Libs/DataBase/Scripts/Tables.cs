@@ -19,8 +19,15 @@ public partial class Tables
     public Maps.TbMaps TbMaps {get; }
     public Items.TbItems TbItems {get; }
     public Mobs.TbMobs TbMobs {get; }
-    public Items.TbAffixes TbAffixes {get; }
     public Items.TbEquipment TbEquipment {get; }
+    public Items.TbChestAffixes TbChestAffixes {get; }
+    public Items.TbGloveAffixes TbGloveAffixes {get; }
+    public Items.TbHelmtAffixes TbHelmtAffixes {get; }
+    public Items.TbPantsAffixes TbPantsAffixes {get; }
+    public Items.TbBootsAffixes TbBootsAffixes {get; }
+    public Items.TbWeaponAffixes TbWeaponAffixes {get; }
+    public Items.TbAmuletAffixes TbAmuletAffixes {get; }
+    public Items.TbRingAffixes TbRingAffixes {get; }
 
     public Tables(System.Func<string, JsonElement> loader)
     {
@@ -29,8 +36,15 @@ public partial class Tables
         TbMaps = new Maps.TbMaps(loader("maps_tbmaps"));
         TbItems = new Items.TbItems(loader("items_tbitems"));
         TbMobs = new Mobs.TbMobs(loader("mobs_tbmobs"));
-        TbAffixes = new Items.TbAffixes(loader("items_tbaffixes"));
         TbEquipment = new Items.TbEquipment(loader("items_tbequipment"));
+        TbChestAffixes = new Items.TbChestAffixes(loader("items_tbchestaffixes"));
+        TbGloveAffixes = new Items.TbGloveAffixes(loader("items_tbgloveaffixes"));
+        TbHelmtAffixes = new Items.TbHelmtAffixes(loader("items_tbhelmtaffixes"));
+        TbPantsAffixes = new Items.TbPantsAffixes(loader("items_tbpantsaffixes"));
+        TbBootsAffixes = new Items.TbBootsAffixes(loader("items_tbbootsaffixes"));
+        TbWeaponAffixes = new Items.TbWeaponAffixes(loader("items_tbweaponaffixes"));
+        TbAmuletAffixes = new Items.TbAmuletAffixes(loader("items_tbamuletaffixes"));
+        TbRingAffixes = new Items.TbRingAffixes(loader("items_tbringaffixes"));
         ResolveRef();
     }
     
@@ -41,8 +55,15 @@ public partial class Tables
         TbMaps.ResolveRef(this);
         TbItems.ResolveRef(this);
         TbMobs.ResolveRef(this);
-        TbAffixes.ResolveRef(this);
         TbEquipment.ResolveRef(this);
+        TbChestAffixes.ResolveRef(this);
+        TbGloveAffixes.ResolveRef(this);
+        TbHelmtAffixes.ResolveRef(this);
+        TbPantsAffixes.ResolveRef(this);
+        TbBootsAffixes.ResolveRef(this);
+        TbWeaponAffixes.ResolveRef(this);
+        TbAmuletAffixes.ResolveRef(this);
+        TbRingAffixes.ResolveRef(this);
     }
 }
 

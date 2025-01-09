@@ -29,25 +29,10 @@ public sealed partial class AffixTemplate : Luban.BeanBase
         return new Items.AffixTemplate(_buf);
     }
 
-    /// <summary>
-    /// id
-    /// </summary>
     public readonly string Id;
-    /// <summary>
-    /// name
-    /// </summary>
     public readonly string Name;
-    /// <summary>
-    /// stat_type
-    /// </summary>
     public readonly Stats.StatType TargetStatType;
-    /// <summary>
-    /// value_type
-    /// </summary>
     public readonly FlowerRpg.Stats.Modifiers.ModifierType ValueType;
-    /// <summary>
-    /// value_range
-    /// </summary>
     public readonly float[] ValueRange;
    
     public const int __ID__ = -475022212;

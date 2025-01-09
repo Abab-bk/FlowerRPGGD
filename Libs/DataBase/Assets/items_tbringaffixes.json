@@ -1,0 +1,130 @@
+[
+  {
+    "id": "a_c_8001",
+    "name": "坚毅",
+    "target_stat_type": 16,
+    "value_type": 0,
+    "value_range": [
+      424457
+    ]
+  },
+  {
+    "id": "a_c_8002",
+    "name": "中邪",
+    "target_stat_type": 5,
+    "value_type": 1,
+    "value_range": [
+      8.3,
+      10
+    ]
+  },
+  {
+    "id": "a_c_8003",
+    "name": "枯萎",
+    "target_stat_type": 6,
+    "value_type": 1,
+    "value_range": [
+      6,
+      7
+    ]
+  },
+  {
+    "id": "a_c_8004",
+    "name": "诅咒",
+    "target_stat_type": 27,
+    "value_type": 1,
+    "value_range": [
+      6,
+      7
+    ]
+  },
+  {
+    "id": "a_c_8005",
+    "name": "霉菌",
+    "target_stat_type": 7,
+    "value_type": 1,
+    "value_range": [
+      40,
+      50
+    ]
+  },
+  {
+    "id": "a_c_8006",
+    "name": "有害",
+    "target_stat_type": 13,
+    "value_type": 1,
+    "value_range": [
+      60,
+      70
+    ]
+  },
+  {
+    "id": "a_c_8007",
+    "name": "寒意",
+    "target_stat_type": 14,
+    "value_type": 0,
+    "value_range": [
+      40,
+      50
+    ]
+  },
+  {
+    "id": "a_c_8008",
+    "name": "冻结",
+    "target_stat_type": 24,
+    "value_type": 1,
+    "value_range": [
+      10,
+      12
+    ]
+  },
+  {
+    "id": "a_c_8009",
+    "name": "冰冻",
+    "target_stat_type": 20,
+    "value_type": 1,
+    "value_range": [
+      40,
+      50
+    ]
+  },
+  {
+    "id": "a_c_8010",
+    "name": "棕色",
+    "target_stat_type": 19,
+    "value_type": 1,
+    "value_range": [
+      40,
+      50
+    ]
+  },
+  {
+    "id": "a_c_8011",
+    "name": "不倦",
+    "target_stat_type": 21,
+    "value_type": 1,
+    "value_range": [
+      40,
+      50
+    ]
+  },
+  {
+    "id": "a_c_8012",
+    "name": "平衡",
+    "target_stat_type": 22,
+    "value_type": 1,
+    "value_range": [
+      40,
+      50
+    ]
+  },
+  {
+    "id": "a_c_8013",
+    "name": "均衡",
+    "target_stat_type": 1,
+    "value_type": 0,
+    "value_range": [
+      107121
+    ]
+  }
+]
