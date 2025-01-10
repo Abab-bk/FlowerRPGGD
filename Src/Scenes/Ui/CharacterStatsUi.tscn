@@ -1,7 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://bhglkb2menaf8"]
+[gd_scene load_steps=2 format=3 uid="uid://bhglkb2menaf8"]
 
 [ext_resource type="Script" path="res://Scripts/Ui/characterStatsUi/CharacterStatsUiPanel.cs" id="1_685sj"]
-[ext_resource type="PackedScene" uid="uid://c8pxp353bx07w" path="res://Scenes/Ui/StatItemUi.tscn" id="2_oamha"]
 
 [node name="CharacterStatsUi" type="Control"]
 layout_mode = 3
@@ -20,15 +19,11 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer"]
+[node name="ScrollContainer" type="ScrollContainer" parent="PanelContainer"]
+layout_mode = 2
+
+[node name="Items" type="VBoxContainer" parent="PanelContainer/ScrollContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/separation = 10
-
-[node name="MaxHealth" parent="PanelContainer/VBoxContainer" instance=ExtResource("2_oamha")]
-unique_name_in_owner = true
-layout_mode = 2
-
-[node name="Speed" parent="PanelContainer/VBoxContainer" instance=ExtResource("2_oamha")]
-unique_name_in_owner = true
-layout_mode = 2

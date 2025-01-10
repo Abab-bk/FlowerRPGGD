@@ -27,6 +27,7 @@ public partial class CharacterUiPanel : CharacterUi
             inventory.AddItem(oldItem);
         };
 
+        S_CharacterStatsUi.Instance.Init(CharacterStats);
         S_CharacterStatsUi.Instance.UpdateUi(CharacterStats);
         
         VisibilityChanged += () =>
