@@ -1,5 +1,4 @@
 ﻿using cfg;
-using DataBase;
 using Game.Scripts.Interfaces;
 using Godot;
 using RPGCore.Stats;
@@ -50,7 +49,6 @@ public partial class CharacterEntity : CharacterBody2D, IGameEntity
 
     protected virtual void OnPhysicUpdated(State state, float delta)
     {
-        Velocity = Velocity with { Y = Velocity.Y + Data.Constants.Gravity * delta };
     }
 
     protected virtual void OnUpdated(State state, float delta)

@@ -98,21 +98,15 @@ public partial class Player : CharacterEntity
         switch (state.GetName())
         {
             case "Running":
-                var x = Input.GetAxis(
+                Velocity = Input.GetVector(
                     "Left",
-                    "Right"
+                    "Right",
+                    "Up",
+                    "Down"
                     ) * Stats.GetStat(StatType.MovementSpeed).Value;
-
-                if (IsOnFloor() && Input.IsActionJustPressed("Jump"))
-                {
-                    Velocity = Velocity with { Y = Velocity.Y - 300f };
-                }
-
-                Velocity = Velocity with { X = x };
-                
                 break;
             case "Idle":
-                Velocity = Velocity with { X = 0f };
+                Velocity = Vector2.Zero;
                 break;
         }
         

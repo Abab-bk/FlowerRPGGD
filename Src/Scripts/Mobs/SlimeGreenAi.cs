@@ -11,12 +11,12 @@ public partial class SlimeGreenAi : MobAi
         switch (state.GetName())
         {
             case "Idle":
-                if (Global.Player.GlobalPosition.DistanceTo(Mob.GlobalPosition) > 200)
+                if (Global.Player.GlobalPosition.DistanceTo(Mob.GlobalPosition) > 100)
                     StateMachine.SetTrigger("ToRunning");
-                Mob.Velocity = Mob.Velocity with { X = 0f };
+                Mob.StopMove();
                 break;
             case "Running":
-                if (Global.Player.GlobalPosition.DistanceTo(Mob.GlobalPosition) < 200)
+                if (Global.Player.GlobalPosition.DistanceTo(Mob.GlobalPosition) < 100)
                     StateMachine.SetTrigger("ToIdle");
                 Mob.MoveToPlayer();
                 break;

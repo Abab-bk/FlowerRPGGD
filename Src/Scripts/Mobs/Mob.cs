@@ -4,6 +4,7 @@ using Game.Scripts.Base;
 using Game.Scripts.Prefabs;
 using Godot;
 using RPGCore.Combat;
+using Vector2 = Godot.Vector2;
 
 namespace Game.Scripts.Mobs;
 
@@ -39,8 +40,13 @@ public partial class Mob : CharacterEntity
 
     public void MoveToPlayer()
     {
-        Velocity = Velocity with { X = (GlobalPosition.DirectionTo(Global.Player.GlobalPosition) *
-                                      Stats.GetStat(StatType.MovementSpeed).Value).X };
+        Velocity = GlobalPosition.DirectionTo(Global.Player.GlobalPosition) *
+                   Stats.GetStat(StatType.MovementSpeed).Value;
+    }
+    
+    public void StopMove()
+    {
+        Velocity = Vector2.Zero;
     }
 
     public static Mob Create(CharacterInfo characterInfo)
