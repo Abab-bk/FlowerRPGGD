@@ -1,22 +1,15 @@
-using DataBase;
 using Godot;
 using RPGCore.Items;
 
 namespace Game.Scripts.Items;
 
-public partial class ItemDropEntity : CharacterBody2D
+public partial class ItemDropEntity : Node2D
 {
     [Export] private Label _label;
     [Export] private Sprite2D _sprite;
     
     private IItem _item;
-
-    public override void _PhysicsProcess(double delta)
-    {
-        Velocity = Velocity with { Y = Velocity.Y + Data.Constants.Gravity * (float)delta };
-        MoveAndSlide();
-    }
-
+    
     public static ItemDropEntity Create(IItem item)
     {
         var scene = GD.Load<PackedScene>("res://Scenes/Items/ItemDropEntity.tscn");
