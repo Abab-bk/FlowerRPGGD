@@ -10,8 +10,8 @@ public class DataDrivenAbility : IAbility
     public string Name { get; set; } = string.Empty;
     public string IconName { get; set; } = string.Empty;
     public float Cooldown { get; set; } = 0f;
-    
-    public IEnumerable<AbilityBehavior> Behaviors { get; set; } = new List<AbilityBehavior>();
+
+    public AbilityBehavior Behavior { get; set; } = AbilityBehavior.Point;
     public IEnumerable<AbilityModifier> Modifiers { get; set; } = new List<AbilityModifier>();
     public IEnumerable<AbilityAction> OnActive { get; set; } = [];
 
@@ -51,7 +51,7 @@ public class DataDrivenAbility : IAbility
         
         foreach (var action in OnActive)
         {
-            action.Activate();
+            action.Activate(this);
         }
         
         OnActivated.Invoke();

@@ -2,5 +2,5 @@
 
 public interface IAbilityProcessor
 {
-    public void ProcessAbilityAction(AbilityAction abilityAction);
+    public void ProcessAbilityAction(AbilityAction abilityAction, IAbility ability);
 }

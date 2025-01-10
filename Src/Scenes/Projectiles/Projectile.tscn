@@ -3,8 +3,9 @@
 [ext_resource type="Script" path="res://Scripts/Projectiles/Projectile.cs" id="1_kbuae"]
 [ext_resource type="Script" path="res://Scripts/Prefabs/HitBox.cs" id="2_8py3w"]
 
-[node name="Projectile" type="Node2D" node_paths=PackedStringArray("HitBox", "Graphics")]
+[node name="Projectile" type="Node2D" node_paths=PackedStringArray("VisibleNotifier", "HitBox", "Graphics")]
 script = ExtResource("1_kbuae")
+VisibleNotifier = NodePath("VisibleOnScreenNotifier2D")
 HitBox = NodePath("HitBox")
 Graphics = NodePath("Graphics")
 
@@ -14,3 +15,6 @@ Graphics = NodePath("Graphics")
 script = ExtResource("2_8py3w")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+scale = Vector2(13.6, 13.6)

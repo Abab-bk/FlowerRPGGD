@@ -29,7 +29,6 @@ public class DataDrivenAbilityTests
         {
             Name = "Fireball",
             IconName = "Fireball",
-            Behaviors = [AbilityBehavior.Point],
             OnActive = [new AbilityAction
             {
                 AbilityActionType = AbilityActionType.FireProjectile,

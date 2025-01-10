@@ -3,5 +3,6 @@
 public enum AbilityBehavior
 {
     Point,
-    Passive
+    Passive,
+    Aura
 }

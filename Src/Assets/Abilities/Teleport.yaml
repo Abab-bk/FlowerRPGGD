@@ -2,7 +2,7 @@
 icon_name: Fireball
 cooldown: 2
 ability_class: DataDriven
-behaviors: [Point]
+behavior: Point
 modifiers: []
 on_active:
   - ability_action_type: FireProjectile

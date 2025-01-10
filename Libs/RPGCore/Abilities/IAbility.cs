@@ -10,7 +10,7 @@ public interface IAbility
     public float Cooldown { get; }
     public bool IsCooldown { get; }
     public AbilityClass AbilityClass { get; }
-    public IEnumerable<AbilityBehavior> Behaviors { get; }
+    public AbilityBehavior Behavior { get; }
     public IEnumerable<AbilityModifier> Modifiers { get; }
     
     public float GetCooldownRatio();

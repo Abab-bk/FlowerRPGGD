@@ -7,11 +7,17 @@ namespace Game.Scripts.Projectiles;
 
 public partial class Projectile : Node2D
 {
+    [Export] private VisibleOnScreenNotifier2D VisibleNotifier { get; set; }
     [Export] public HitBox HitBox { get; private set; }
     [Export] private Node2D Graphics { get; set; }
 
     private float _rotation;
     private float _moveSpeed;
+
+    public override void _Ready()
+    {
+        VisibleNotifier.ScreenExited += Destroy;
+    }
 
     public void Config(
         bool isPlayer,
@@ -24,9 +30,11 @@ public partial class Projectile : Node2D
         _rotation = rotation;
         _moveSpeed = moveSpeed;
 
+        Rotation = _rotation;
+        
         HitBox.OnHit += OnHit;
         
-        Rotation = Mathf.DegToRad(rotation);
+        // Rotation = Mathf.DegToRad(rotation);
     }
 
     protected virtual void OnHit()
@@ -42,8 +50,7 @@ public partial class Projectile : Node2D
     public override void _PhysicsProcess(double delta)
     {
         base._PhysicsProcess(delta);
-
-        Position += Vector2.Right.Rotated(Rotation) * _moveSpeed * (float)delta;
+        Position += Vector2.Right.Rotated(_rotation) * _moveSpeed * (float)delta;
     }
 
     public static Projectile Create(string projectileName)
