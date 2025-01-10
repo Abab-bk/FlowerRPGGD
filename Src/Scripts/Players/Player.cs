@@ -92,12 +92,8 @@ public partial class Player : CharacterEntity
         switch (state.GetName())
         {
             case "Running":
-                Velocity = Input.GetVector(
-                    "Left",
-                    "Right",
-                    "Up",
-                    "Down"
-                    ) * Stats.GetStat(StatType.MovementSpeed).Value;
+                Velocity = InputManager.MoveVector2Composite.ReadValue() *
+                           Stats.GetStat(StatType.MovementSpeed).Value;
                 break;
             case "Idle":
                 Velocity = Vector2.Zero;
@@ -127,13 +123,12 @@ public partial class Player : CharacterEntity
 
     public override void _ShortcutInput(InputEvent @event)
     {
-        if (
-            @event.IsActionPressed("Interact") &&
-            _interactTipPanels.Count > 0
-            )
-        {
-            _interactTipPanels.First().Interactable.Interact();
-        }
+        // if (@event.IsActionPressed("Interact") &&
+        //     _interactTipPanels.Count > 0
+        //     )
+        // {
+        //     _interactTipPanels.First().Interactable.Interact();
+        // }
     }
 
     public static Player Create(CharacterInfo characterInfo)

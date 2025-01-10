@@ -13,12 +13,7 @@ public partial class PlayerController(Player player) : Node
         var state = Player.StateMachine.GetCurrentState();
         if (state == null) return;
 
-        var dir = Input.GetVector(
-            "Left",
-            "Right",
-            "Up",
-            "Down"
-        );
+        var dir = InputManager.MoveVector2Composite.ReadValue();
         
         switch (state.GetName())
         {

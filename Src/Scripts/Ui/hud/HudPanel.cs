@@ -1,6 +1,5 @@
 using DsUi;
 using Game.Scripts.Ui.ItemTooltip;
-using Godot;
 
 namespace Game.Scripts.Ui.Hud;
 
@@ -53,19 +52,13 @@ public partial class HudPanel : Hud
                 );
             S_AbilityLoadoutUi.Instance.Init(Global.Player.AbilityLoadout);
         };
-    }
 
-    public override void _ShortcutInput(InputEvent @event)
-    {
-        if (@event.IsActionPressed("CharacterUi"))
+        InputManager.CharacterUi.OnPerformed += () =>
         {
             ChangePage(Page.CharacterUi);
-        }
-    }
-    
-    public override void _Input(InputEvent @event)
-    {
-        if (@event.IsActionPressed("Pause"))
+        };
+
+        InputManager.Pause.OnPerformed += () =>
         {
             if (Global.IsPaused)
             {
@@ -75,6 +68,6 @@ public partial class HudPanel : Hud
             {
                 UiManager.Open_PauseMenu();
             }
-        }
+        };
     }
 }

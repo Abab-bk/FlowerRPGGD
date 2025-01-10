@@ -38,7 +38,12 @@ public partial class Application : Node2D
             _stateMachine.SetTrigger("ToStartMenu");
         };
     }
-    
+
+    public override void _Process(double delta)
+    {
+        InputManager.Update();
+    }
+
     private async void OnStateMachineTransition(State from, State to)
     {
         Logger.Log($"[Application]: {from.GetName()} -> {to.GetName()}");
@@ -49,6 +54,8 @@ public partial class Application : Node2D
                 
                 Global.AppSaver = new AppSaver();
                 Global.AppSaver.Load();
+                
+                InputManager.Init();
                 
                 await GDTask.NextFrame();
                 _stateMachine.SetTrigger("Next");

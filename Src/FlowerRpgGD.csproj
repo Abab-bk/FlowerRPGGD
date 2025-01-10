@@ -57,6 +57,9 @@
   </ItemGroup>
   
   <ItemGroup>
+    <Reference Include="FlowerInputSystem">
+      <HintPath>..\Libs\FlowerInputSystem.dll</HintPath>
+    </Reference>
     <Reference Include="GodotSharp.SourceGenerators">
       <HintPath>GodotSharp.SourceGenerators.dll</HintPath>
     </Reference>
