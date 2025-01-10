@@ -27,8 +27,6 @@ public partial class Player : CharacterEntity
     
     private readonly List<InteractTipPanel> _interactTipPanels = new();
     
-    private HFSM ActionStateMachine { get; set; }
-    
     public override void _Ready()
     {
         Global.Player = this;
@@ -54,10 +52,6 @@ public partial class Player : CharacterEntity
                 break;
             }
         };
-
-        ActionStateMachine = HFSMUtils.TryConvert<HFSM>(GetNode<Node>("HFSM2"));
-        if (ActionStateMachine == null)
-            throw new System.Exception("Initialize Player state machine failed.");
 
         Equipments.Weapon.StoredItemChanged += item =>
         {
@@ -129,28 +123,6 @@ public partial class Player : CharacterEntity
 
     protected override void OnTransited(State from, State to)
     {
-    }
-
-    public override void _UnhandledInput(InputEvent @event)
-    {
-        base._UnhandledInput(@event);
-        if (!Equipments.Weapon.HasItem)
-        {
-            return;
-        }
-
-        var state = ActionStateMachine.GetCurrentState();
-        if (state == null) return;
-
-        if (state.GetName() != "Idle")
-        {
-            return;
-        }
-
-        if (@event.IsActionPressed("Attack"))
-        {
-            ActionStateMachine.SetTrigger("ToAttacking");
-        }
     }
 
     public override void _ShortcutInput(InputEvent @event)
